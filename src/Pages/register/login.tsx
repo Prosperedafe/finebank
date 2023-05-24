@@ -1,12 +1,12 @@
-import './register.css';
-import google from '../../assets/Google.svg';
+import './login.css';
 import { FC } from "react";
 import { eye } from "react-icons-kit/feather/eye";
-import { Logo } from "../../components/asset";
 import { Link } from 'react-router-dom';
 import { Icon } from "react-icons-kit";
 import { eyeOff } from "react-icons-kit/feather/eyeOff";
 import { useState } from 'react';
+import { Input, Logo } from "../../components/asset";
+import { GoogleBtn, SignBtn } from '../../components/asset';
 
 export const Login: FC = () => {
 
@@ -32,13 +32,13 @@ export const Login: FC = () => {
             <Logo />
             <form onSubmit={handleSubmit}>
                 <label htmlFor="email">Email Address</label><br />
-                <input type="email" placeholder="johndeo@gmail.com" />
+                <Input type='email' placeholder="johndeo@gmail.com" />
                 <div className='password_label'>
-                    <label htmlFor="password">Email Address</label>
+                    <label htmlFor="password">Password</label>
                     <Link to='/forgotpassword'>Forgot Password?</Link>
                 </div>
                 <div className='password'>
-                    <input type={type} placeholder="password" />
+                    <Input type={type} placeholder="Password" />
                     <span onClick={handleToggle}>
                         <Icon icon={icon} size={18} />
                     </span>
@@ -48,13 +48,10 @@ export const Login: FC = () => {
                     <span className="checkmark"></span>
                     Keep me signed in
                 </label>
-                <button type="submit">Login</button>
+                <SignBtn content='Login' />
             </form>
             <p><span></span><small>or sign up with</small><span></span></p>
-            <button className='google-btn'>
-                <img src={google} alt="Google logo icon" />
-                <span>Continue with Google</span>
-            </button>
+            <GoogleBtn content='Continue with Google' />
             <Link to='/signup'>Create an account</Link>
         </section>
     )

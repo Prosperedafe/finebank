@@ -1,0 +1,86 @@
+.signup {
+    padding: 4rem 1rem;
+    max-width: 500px;
+    margin: auto;
+}
+
+.signup>img {
+    display: block;
+    margin: auto;
+}
+
+.signup h2 {
+    color: #191D23;
+    font-size: 1.7rem;
+    margin: 2rem auto;
+    max-width: max-content;
+}
+
+.signup p {
+    color: #4B5768;
+    font-size: .9rem;
+}
+
+.signup p span {
+    color: #299D91;
+    font-size: .9rem;
+    display: inline-block;
+}
+
+.signup label {
+    color: #191D23;
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: .7rem;
+    display: inline-block;
+}
+
+.signup label[for='email'] {
+    margin-top: 1.5rem;
+}
+
+.signup input[type='email'] {
+    margin-bottom: 1.5rem;
+}
+
+.signup .password {
+    margin-bottom: 1.5rem;
+}
+
+.signup .terms {
+    margin-bottom: 1rem;
+}
+
+.signup .rule {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2rem auto;
+    gap: 1rem;
+    max-width: 90%;
+}
+
+.signup .rule small {
+    color: #999DA3;
+    font-size: .9rem;
+}
+
+.signup .rule span {
+    background-color: #c4c5c5;
+    height: 1px;
+    display: inline-block;
+    flex-grow: 1;
+}
+
+.signup>p {
+    color: #999DA3;
+    text-align: center;
+    display: block;
+    margin: 2rem 0;
+    font-weight: 500;
+}
+
+.signup>p a {
+    color: #299D91;
+    font-weight: 600;
+}
