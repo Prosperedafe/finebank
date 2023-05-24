@@ -11,3 +11,19 @@ nav>div {
     width: 100%;
     padding: 2rem 1rem;
 }
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    display: block;
+    width: 100%;
+}
+
+nav ul li a {
+    width: 100%;
+    color: white;
+    display: flex;
+    align-items: center;
+}
