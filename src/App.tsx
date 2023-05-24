@@ -1,10 +1,10 @@
 import './App.css';
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import OverView from './Pages/overview';
-import { Welcome } from './Pages/welcome';
-import { Login } from './Pages/register/login';
 import Signup from './Pages/register/signup';
+import OverView from './Pages/overview/overview';
+import { Login } from './Pages/register/login';
+import { Welcome } from './Pages/welcome';
 import { ForgotPassword } from './Pages/register/forgotPassword';
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 function App() {
 

@@ -20,7 +20,7 @@ interface inputs {
 
 export const Logo = () => {
     return (
-        <img height='28px' src={logo} alt="logo" />
+        <img className='logo' src={logo} alt="logo" />
     )
 }
 

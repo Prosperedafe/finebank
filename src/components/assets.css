@@ -1,3 +1,13 @@
+.logo {
+    height: 32px;
+}
+
+@media(max-width: 300px) {
+    .logo {
+        height: 20px;
+    }
+}
+
 .sign-btn {
     background-color: #299D91;
     color: white;
