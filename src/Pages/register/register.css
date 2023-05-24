@@ -1,0 +1,142 @@
+.login {
+    padding: 4rem 1rem;
+    max-width: 500px;
+    margin: auto;
+}
+
+.login a {
+    color: #299D91;
+    font-size: .9rem;
+    font-weight: 500;
+}
+
+.login>a {
+    display: block;
+    margin: auto;
+    max-width: fit-content;
+    font-size: 1rem;
+    margin-top: 2rem;
+}
+
+.login>img {
+    display: block;
+    margin: auto;
+}
+
+.login form {
+    margin: 3rem 0 2rem 0;
+}
+
+.login label {
+    color: #191D23;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.login label[for='email'] {
+    margin-bottom: .7rem;
+    display: inline-block;
+}
+
+.login label[for='checked'] {
+    display: flex;
+    gap: 5px;
+    color: #191D23;
+    margin: 1rem 0 1rem 0;
+}
+
+.login label[for='checked'] input {
+    width: unset;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+.login label[for='checked'] input:focus {
+    outline: none;
+}
+
+.login input {
+    border: 1px solid #D0D5DD;
+    border-radius: 8px;
+    background-color: transparent;
+    font-size: 1rem;
+    padding: .7rem 1rem;
+    width: 100%;
+    transition: all .3s ease;
+    color: #4B5768;
+}
+
+.login input:focus {
+    outline: 1px solid #4B5768;
+}
+
+.password {
+    position: relative;
+}
+
+.password input {
+    padding-right: 2.8rem;
+}
+
+.password span {
+    position: absolute;
+    right: 1rem;
+    top: .7rem;
+}
+
+.password i {
+    color: #999DA3;
+}
+
+.password_label {
+    display: flex;
+    justify-content: space-between;
+    margin: 1.5rem 0 .7rem 0;
+}
+
+.login button[type='submit'] {
+    background-color: #299D91;
+    color: white;
+    border: none;
+    width: 100%;
+    font-size: 1rem;
+    padding: .7rem 2rem;
+    border-radius: 4px;
+}
+
+.login p {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2rem auto;
+    gap: 1rem;
+    max-width: 90%;
+}
+
+.login p small {
+    color: #999DA3;
+    font-size: .9rem;
+}
+
+.login p span {
+    background-color: #c4c5c5;
+    height: 1px;
+    display: inline-block;
+    flex-grow: 1;
+}
+
+.login .google-btn {
+    color: #4B5768;
+    font-size: 1rem;
+    display: flex;
+    gap: .7rem;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: #E4E7EB;
+    border: none;
+    border-radius: 4px;
+    padding: .7rem 2rem;
+    font-weight: 500;
+}
