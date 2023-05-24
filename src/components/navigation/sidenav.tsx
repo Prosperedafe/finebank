@@ -1,9 +1,12 @@
+import './sidenav.css'
 import logo from '../../assets/FINEbank.IO.svg';
 
 const SideNav = () => {
     return (
         <nav>
-            <img src={logo} alt="logo" />
+            <div>
+                <img src={logo} alt="logo" />
+            </div>
         </nav>
     )
 }

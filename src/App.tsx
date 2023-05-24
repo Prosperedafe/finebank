@@ -5,18 +5,24 @@ import { Login } from './Pages/register/login';
 import { Welcome } from './Pages/welcome';
 import { ForgotPassword } from './Pages/register/forgotPassword';
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import SideNav from './components/navigation/sidenav';
 
 function App() {
 
   return (
     <BrowserRouter>
-      <Routes>
-        <Route path='/' element={<OverView />} />
-        <Route path='/welcome' element={<Welcome />} />
-        <Route path='/login' element={<Login />} />
-        <Route path='/signup' element={<Signup />} />
-        <Route path='/forgotpassword' element={<ForgotPassword />} />
-      </Routes>
+      <div className="app">
+        <SideNav />
+        <div>
+          <Routes>
+            <Route path='/' element={<OverView />} />
+            <Route path='/welcome' element={<Welcome />} />
+            <Route path='/login' element={<Login />} />
+            <Route path='/signup' element={<Signup />} />
+            <Route path='/forgotpassword' element={<ForgotPassword />} />
+          </Routes>
+        </div>
+      </div>
     </BrowserRouter>
   )
 }

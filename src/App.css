@@ -23,3 +23,8 @@ a {
 button {
   cursor: pointer;
 }
+
+.app {
+  display: grid;
+  grid-template-columns: 200px auto;
+}

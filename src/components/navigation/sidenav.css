@@ -1,0 +1,13 @@
+nav {
+    background: #191919;
+    position: relative;
+}
+
+nav>div {
+    position: fixed;
+    max-width: 230px;
+    background: inherit;
+    min-height: 100%;
+    width: 100%;
+    padding: 2rem 1rem;
+}
