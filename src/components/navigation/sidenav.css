@@ -5,7 +5,7 @@ nav {
 
 nav>div {
     position: fixed;
-    max-width: 250px;
+    max-width: 280px;
     background: inherit;
     overflow-y: scroll;
     min-height: 100%;
@@ -27,26 +27,36 @@ nav ul {
     margin-top: 3rem;
 }
 
-nav ul li {
+nav li {
     display: block;
     width: 100%;
 }
 
-nav ul li a {
+nav a {
     width: 100%;
     color: rgba(255, 255, 255, 0.7);
     display: flex;
     align-items: center;
     gap: 10px;
     font-size: 1rem;
-    font-weight: 500;
+    font-weight: 400;
     border-radius: 4px;
     padding: .7rem 1rem;
+    transition: all .3s ease;
 }
 
-nav ul li .active {
+nav a:hover {
+    background: rgba(255, 255, 255, 0.08);
+}
+
+nav .active {
     background: #299D91;
     color: #ffff;
+    font-weight: 500;
+}
+
+nav .active:hover {
+    background: #299D91;
 }
 
 nav .logout {
