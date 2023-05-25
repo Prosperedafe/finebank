@@ -1,13 +1,12 @@
-import { FC } from "react";
 import { PagesHeader } from "../../components/dashboard/header";
 
-const OverView: FC = () => {
-
+const Balances = () => {
     return (
-        <section>
+        <section className="balances">
             <PagesHeader />
+            balances
         </section>
     )
 }
 
-export default OverView;
+export default Balances;

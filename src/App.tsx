@@ -6,8 +6,19 @@ import { Welcome } from './Pages/welcome';
 import { ForgotPassword } from './Pages/register/forgotPassword';
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import SideNav from './components/navigation/sidenav';
+import Balances from './Pages/balances/balances';
 
 function App() {
+  //  console.log(window.location.href);
+
+  // /about
+  // console.log(window.location.pathname);
+
+  // http:
+  // console.log(window.location.protocol);
+
+  // localhost
+  // console.log(window.location.hostname);
 
   return (
     <BrowserRouter>
@@ -20,6 +31,7 @@ function App() {
             <Route path='/login' element={<Login />} />
             <Route path='/signup' element={<Signup />} />
             <Route path='/forgotpassword' element={<ForgotPassword />} />
+            <Route path='/balances' element={<Balances />} />
           </Routes>
         </div>
       </div>

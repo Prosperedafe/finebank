@@ -1,0 +1,56 @@
+.pages_header {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 1rem 1rem;
+    gap: 1rem;
+}
+
+.pages_header .name {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.pages_header .name p {
+    color: #9F9F9F;
+    font-size: .9rem;
+    font-weight: 500;
+}
+
+.pages_header .name h2 {
+    color: #191919;
+    font-size: 1.6rem;
+    font-weight: 700;
+}
+
+.pages_header .notifications {
+    display: flex;
+    gap: 2rem;
+}
+
+.pages_search {
+    position: relative;
+}
+
+.pages_search input {
+    width: 100%;
+    max-width: 100%;
+    border: none;
+    background: #FFFFFF;
+    box-shadow: 0px 26px 26px rgba(106, 22, 58, 0.04);
+    border-radius: 12px;
+    color: #9F9F9F;
+    font-size: 1rem;
+    padding: .8rem 3rem .8rem 1rem;
+}
+
+.pages_search input:focus {
+    outline: none;
+}
+
+.pages_search img {
+    position: absolute;
+    right: 1rem;
+    top: .8rem;
+}
