@@ -1,12 +1,17 @@
+import './overview.css';
 import { FC } from "react";
+import { TotalBalance } from "./plans";
 import { PagesHeader } from "../../components/dashboard/header";
 
 const OverView: FC = () => {
 
     return (
-        <section>
+        <>
             <PagesHeader />
-        </section>
+            <section className='overview'>
+                <TotalBalance />
+            </section>
+        </>
     )
 }
 

@@ -1,0 +1,76 @@
+.total_balance {
+    max-width: 400px;
+}
+
+.total_balance>div {
+    background: #FFFFFF;
+    box-shadow: 0px 20px 25px rgba(76, 103, 100, 0.1);
+    border-radius: 8px;
+    padding: 1rem;
+    margin-top: .7rem;
+}
+
+.total_balance h4 {
+    color: #191919;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.total_balance .balance {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #F3F3F3;
+    padding-bottom: .7rem;
+}
+
+.total_balance .balance p {
+    color: #525256;
+    font-size: .95rem;
+    font-weight: 600;
+    align-items: center;
+}
+
+.total_balance .account_type {
+    background: #299D91;
+    border-radius: 4px;
+    padding: 1rem;
+    margin: .9rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.total_balance .navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.total_balance .navigation>button {
+    border: none;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: .9rem;
+    font-weight: 500;
+}
+
+.total_balance .navigation>div {
+    display: flex;
+    gap: 4px;
+}
+
+.total_balance .navigation>div button {
+    border-radius: 50%;
+    border: none;
+    height: 8px;
+    width: 8px;
+    background-color: #D1D1D1;
+}
+
+.total_balance .navigation>div button:nth-child(1) {
+    background-color: #299D91;
+    transform: scale(1.05);
+}
