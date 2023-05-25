@@ -1,7 +1,10 @@
 import './sidenav.css';
 import logo from '../../assets/FINEbank.IO.svg';
 import links from './links';
-import { NavLink } from 'react-router-dom'
+import logout from './icons/Logout.svg';
+import dp from './icons/profile.png';
+import options from './icons/options.svg';
+import { NavLink } from 'react-router-dom';
 
 const SideNav = () => {
     return (
@@ -12,7 +15,7 @@ const SideNav = () => {
                     {links.map((link: object | any, index: number) => {
                         return (
                             <li key={index}>
-                                <NavLink to={link.path}>
+                                <NavLink className={({ isActive }) => (isActive ? "active" : "")} to={link.path}>
                                     <img src={link.icon} alt="icon" />
                                     {link.name}
                                 </NavLink>
@@ -20,6 +23,18 @@ const SideNav = () => {
                         )
                     })}
                 </ul>
+                <button className='logout'>
+                    <img src={logout} alt="logout" />
+                    <span>Logout</span>
+                </button>
+                <div className="profile">
+                    <img className='dp' src={dp} alt="display profile" />
+                    <div>
+                        <p className='name'>Tanzir Rahman</p>
+                        <p className='view'>View profile</p>
+                    </div>
+                    <img className='options' src={options} alt="options" />
+                </div>
             </div>
         </nav>
     )

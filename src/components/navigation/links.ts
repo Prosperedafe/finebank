@@ -8,7 +8,7 @@ import settings from './icons/Settings.svg';
 
 const links: Array<object> = [
     {
-        path: '/overview',
+        path: '/',
         name: 'Overview',
         icon: overview,
     },
