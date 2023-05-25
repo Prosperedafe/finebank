@@ -1,7 +1,8 @@
 import './overview.css';
 import { FC } from "react";
-import { TotalBalance } from "./plans";
+import { Goals } from './components/goals';
 import { PagesHeader } from "../../components/dashboard/header";
+import { TotalBalance } from "./components/totalBalance";
 
 const OverView: FC = () => {
 
@@ -9,7 +10,10 @@ const OverView: FC = () => {
         <>
             <PagesHeader />
             <section className='overview'>
-                <TotalBalance />
+                <div className='overview_revenues'>
+                    <TotalBalance />
+                    <Goals />
+                </div>
             </section>
         </>
     )

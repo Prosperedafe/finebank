@@ -7,3 +7,9 @@
     font-size: 1.5rem;
     font-weight: 400;
 }
+
+.overview_revenues {
+    display: flex;
+    justify-content: space-between;
+    gap: 1.5rem;
+}
