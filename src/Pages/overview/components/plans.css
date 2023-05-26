@@ -5,7 +5,8 @@
 } */
 
 .total_balance>div,
-.goals>div {
+.goals>div,
+.bills {
     background: #FFFFFF;
     box-shadow: 0px 20px 25px rgba(76, 103, 100, 0.1);
     border-radius: 8px;
@@ -124,4 +125,53 @@
     font-size: .8rem;
     font-weight: 600;
     margin-top: .55rem;
+}
+
+/* bills */
+
+.bills_heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.bills_heading button {
+    border: none;
+    background: transparent;
+    font-size: .85rem;
+    font-weight: 500;
+    color: #878787;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.bills {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.bills .divider {
+    background: #F3F3F3;
+    height: 2px;
+}
+
+.bills>div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.bills>div>button {
+    display: inline-block;
+    margin-left: auto;
+    background: #FFFFFF;
+    border: 1px solid #E8E8E8;
+    border-radius: 8px;
+    color: #525256;
+    font-size: 1rem;
+    font-weight: 700;
+    padding: .5rem .7rem;
 }
