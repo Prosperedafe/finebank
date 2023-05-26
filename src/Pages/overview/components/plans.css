@@ -45,6 +45,7 @@
     padding: 1rem;
     margin: .9rem 0;
     display: flex;
+    gap: 1rem;
     justify-content: space-between;
     align-items: center;
 }
@@ -95,6 +96,7 @@
 .goals_overview {
     margin: .9rem 0 0 0;
     display: flex;
+    gap: 1rem;
     justify-content: space-between;
     align-items: center;
 }

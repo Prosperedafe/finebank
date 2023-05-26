@@ -31,6 +31,16 @@ button {
   grid-template-columns: 250px auto;
 }
 
+@media(max-width: 650px) {
+  .app {
+    grid-template-columns: 1fr;
+  }
+
+  main {
+    margin-bottom: 5rem;
+  }
+}
+
 :root {
   --scroll-bar-color: #c5c5c5;
   --scroll-bar-bg-color: #f6f6f6;

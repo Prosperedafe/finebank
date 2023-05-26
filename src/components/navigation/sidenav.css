@@ -1,6 +1,7 @@
 nav {
     background: #191919;
     position: relative;
+    z-index: 10;
 }
 
 nav>div {
@@ -109,4 +110,70 @@ nav .profile .view {
     font-size: .9rem;
     color: rgba(255, 255, 255, 0.7);
     margin-top: 5px;
+}
+
+@media(max-width: 650px) {
+    nav>div {
+        position: fixed;
+        max-width: 1300px;
+        background: inherit;
+        overflow-y: scroll;
+        min-height: 50px;
+        max-height: fit-content;
+        width: 100%;
+        padding: .5rem 1rem;
+        display: flex;
+        bottom: 0;
+    }
+
+    nav ul {
+        flex-direction: row;
+        margin: 0 auto 0 auto;
+    }
+
+    nav ul span {
+        display: none;
+    }
+
+    nav>div>img {
+        display: none;
+        margin: auto;
+    }
+
+    nav .logout {
+        display: none;
+    }
+
+    nav .profile {
+        display: none;
+    }
+}
+
+@media(max-width: 550px) {
+    nav ul {
+        gap: .5rem;
+    }
+
+    nav a {
+        padding: .5rem .7rem;
+    }
+
+    nav a img {
+        height: 20px;
+    }
+}
+
+@media(max-width: 350px) {
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    nav li {
+        flex-basis: 50px;
+    }
+
+    nav a {
+        max-width: fit-content;
+    }
 }

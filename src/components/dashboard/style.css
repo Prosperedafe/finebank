@@ -7,6 +7,10 @@
     border-bottom: 1px solid #E8E8E8;
 }
 
+.pages_header>div {
+    flex-grow: 1;
+}
+
 .pages_header .name {
     display: flex;
     align-items: center;
@@ -28,10 +32,19 @@
 .pages_header .notifications {
     display: flex;
     gap: 2rem;
+    max-width: fit-content;
 }
 
 .pages_search {
     position: relative;
+    width: 350px;
+}
+
+@media(max-width: 700px) {
+    .pages_search {
+        position: relative;
+        width: unset;
+    }
 }
 
 .pages_search input {

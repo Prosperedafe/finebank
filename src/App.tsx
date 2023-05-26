@@ -24,7 +24,7 @@ function App() {
     <BrowserRouter>
       <div className="app">
         <SideNav />
-        <div>
+        <main>
           <Routes>
             <Route path='/' element={<OverView />} />
             <Route path='/welcome' element={<Welcome />} />
@@ -33,7 +33,7 @@ function App() {
             <Route path='/forgotpassword' element={<ForgotPassword />} />
             <Route path='/balances' element={<Balances />} />
           </Routes>
-        </div>
+        </main>
       </div>
     </BrowserRouter>
   )

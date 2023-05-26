@@ -17,7 +17,9 @@ const SideNav = () => {
                             <li key={index}>
                                 <NavLink className={({ isActive }) => (isActive ? "active" : "")} to={link.path}>
                                     <img src={link.icon} alt="icon" />
-                                    {link.name}
+                                    <span>
+                                        {link.name}
+                                    </span>
                                 </NavLink>
                             </li>
                         )
