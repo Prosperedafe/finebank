@@ -4,7 +4,7 @@
 
 .overview h3 {
     color: #878787;
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     font-weight: 400;
 }
 
@@ -20,4 +20,8 @@
     flex-grow: 1;
     max-width: 400px;
     margin: auto;
+}
+
+.overview .transactions {
+    margin-top: 1.5rem;
 }

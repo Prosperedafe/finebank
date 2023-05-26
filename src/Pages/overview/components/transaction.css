@@ -1,0 +1,79 @@
+.overview_transaction {
+    max-width: 400px;
+    margin: auto;
+}
+
+.overview_transaction header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.overview_transaction header button {
+    border: none;
+    background: transparent;
+    font-size: .85rem;
+    font-weight: 500;
+    color: #878787;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.overview_transaction hgroup {
+    display: flex;
+    justify-content: space-between;
+    gap: .5rem;
+    margin: 0 auto 1rem auto;
+}
+
+.overview_transaction hgroup button {
+    border: none;
+    background: transparent;
+    color: #525256;
+    font-size: 1rem;
+    font-weight: 600;
+    border-bottom: 2px solid transparent;
+    padding: 0 .5rem .5rem .5rem;
+}
+
+.overview_transaction hgroup .current {
+    color: #299D91;
+    border-bottom: 2px solid #299D91;
+}
+
+.overview_transaction .main {
+    background: #FFFFFF;
+    box-shadow: 0px 20px 25px rgba(76, 103, 100, 0.1);
+    border-radius: 8px;
+    padding: 1rem;
+    margin-top: .7rem;
+}
+
+.overview_transaction .items {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    padding: 1.2rem 0;
+}
+
+.overview_transaction h5 {
+    font-size: 1rem;
+    color: #191919;
+    margin-bottom: 3px;
+}
+
+.overview_transaction h6 {
+    font-size: 1rem;
+    color: #525256;
+    margin-bottom: 3px;
+}
+
+.overview_transaction p {
+    font-size: .8rem;
+    color: #9F9F9F;
+}
+
+.overview_transaction .items>div:nth-child(3) {
+    margin-left: auto;
+}

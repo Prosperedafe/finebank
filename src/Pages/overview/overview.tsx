@@ -4,6 +4,7 @@ import { Bill } from './components/bill';
 import { Goals } from './components/goals';
 import { PagesHeader } from "../../components/dashboard/header";
 import { TotalBalance } from "./components/totalBalance";
+import { Transaction } from './components/transaction';
 
 const OverView: FC = () => {
 
@@ -15,6 +16,9 @@ const OverView: FC = () => {
                     <TotalBalance />
                     <Goals />
                     <Bill />
+                </div>
+                <div className="transactions">
+                    <Transaction />
                 </div>
             </section>
         </>
