@@ -150,6 +150,10 @@ nav .profile .view {
 }
 
 @media(max-width: 550px) {
+    nav>div {
+        padding: .5rem 0;
+    }
+
     nav ul {
         gap: .5rem;
     }
