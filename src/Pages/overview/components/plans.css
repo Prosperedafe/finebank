@@ -11,6 +11,7 @@
     border-radius: 8px;
     padding: 1rem;
     margin-top: .7rem;
+    min-height: 220px;
 }
 
 .total_balance h4,
@@ -120,7 +121,7 @@
 
 .goals_overview .graph>p {
     color: #191919;
-    font-size: .9rem;
+    font-size: .8rem;
     font-weight: 600;
     margin-top: .55rem;
 }
