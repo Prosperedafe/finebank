@@ -1,8 +1,8 @@
-.total_balance,
+/* .total_balance,
 .goals {
     flex-basis: 250px;
     flex-grow: 1;
-}
+} */
 
 .total_balance>div,
 .goals>div {
@@ -11,7 +11,6 @@
     border-radius: 8px;
     padding: 1rem;
     margin-top: .7rem;
-    /* height: 100%; */
 }
 
 .total_balance h4,
@@ -85,6 +84,43 @@
 
 /* goals */
 
-.goals {
-    flex-basis: 250px;
+.goals .target {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.goals_overview {
+    margin: .9rem 0 0 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.goals_overview>.graph div {
+    display: flex;
+    justify-content: space-between;
+}
+
+.goals_overview>.graph div p {
+    color: #D1D1D1;
+    font-size: .8rem;
+    font-weight: 600;
+}
+
+.goals_overview>.graph div p:nth-child(2) {
+    color: #191919;
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.goals_overview .graph>img {
+    width: 100%;
+}
+
+.goals_overview .graph>p {
+    color: #191919;
+    font-size: .9rem;
+    font-weight: 600;
+    margin-top: .55rem;
 }
