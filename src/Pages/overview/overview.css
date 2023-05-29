@@ -19,17 +19,21 @@
     flex-basis: 320px;
     flex-grow: 1;
     max-width: 400px;
-    margin: auto;
+    margin: 0 auto;
 }
 
 .overview .transactions {
     margin-top: 1.5rem;
     display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
     gap: 1.5rem;
     flex-wrap: wrap;
 }
 
 .overview .transactions .stats {
-    flex-grow: 10;
-    /* flex-basis: 650px; */
+    flex-grow: 2;
+    margin: 0 auto;
+    display: grid;
+    gap: 1rem;
 }

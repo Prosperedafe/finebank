@@ -1,13 +1,13 @@
 import './expenses.css';
-import housing from '../../assets/housing.svg';
-import arrowRight from '../../assets/arrow-right.svg';
-import uparrow from '../../assets/Up arrow.svg';
-import downarrow from '../../assets/Down arrow.svg';
-import entertainment from '../../assets/entertainment.svg';
 import food from '../../assets/food.svg';
-import transportation from '../../assets/transport.svg';
-import shopping from '../../assets/shopping.svg';
 import others from '../../assets/others.svg';
+import housing from '../../assets/housing.svg';
+import uparrow from '../../assets/Up arrow.svg';
+import shopping from '../../assets/shopping.svg';
+import downarrow from '../../assets/Down arrow.svg';
+import arrowRight from '../../assets/arrow-right.svg';
+import entertainment from '../../assets/entertainment.svg';
+import transportation from '../../assets/transport.svg';
 
 const expenses: Array<object> = [
     {
