@@ -1,0 +1,53 @@
+.overview_expenses {
+    max-width: 800px;
+    margin: auto;
+}
+
+.overview_expenses>div {
+    background: #FFFFFF;
+    box-shadow: 0px 20px 25px rgba(76, 103, 100, 0.1);
+    border-radius: 8px;
+    padding: 1rem;
+    margin-top: .7rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.overview_expenses .expenses {
+    display: flex;
+    gap: .7rem;
+    align-items: center;
+    flex-grow: 1;
+    flex-basis: 150px;
+    padding: 1rem;
+}
+
+.overview_expenses .expenses h4 {
+    color: #878787;
+    font-size: .8rem;
+    font-weight: 500;
+}
+
+.overview_expenses .price {
+    font-size: .95rem;
+    color: #191919;
+    font-weight: 700;
+    margin: .18rem 0;
+}
+
+.overview_expenses .rate {
+    color: #9F9F9F;
+    font-size: .8rem;
+    font-weight: 500;
+}
+
+.overview_expenses .rate img {
+    height: 14px;
+}
+
+@media(max-width: 450px) {
+    .overview_expenses .expenses {
+        padding: 1rem 0;
+    }
+}
