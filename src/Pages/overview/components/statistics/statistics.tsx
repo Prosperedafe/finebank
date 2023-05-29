@@ -1,11 +1,13 @@
+import './transaction.css';
+import graph from '../../assets/Graph.svg';
 import arrowdown from '../../assets/arrow-down.svg';
 
 export const Statistics = () => {
     return (
-        <section className="statistics">
+        <section className="overview_statistics">
             <h3>Statistics</h3>
             <div>
-                <div className="statistics_filter">
+                <div className="overview_statistics_filter">
                     <h4><span>Weekly Comparison</span><img src={arrowdown} alt="" /></h4>
                     <div>
                         <button>
@@ -16,6 +18,7 @@ export const Statistics = () => {
                         </button>
                     </div>
                 </div>
+                <img src={graph} className='graph' alt="graph" />
             </div>
         </section>
     )

@@ -20,7 +20,7 @@ const OverView: FC = () => {
                 </div>
                 <div className="transactions">
                     <Transaction />
-                    <div>
+                    <div className='stats'>
                         <Statistics />
                     </div>
                 </div>
