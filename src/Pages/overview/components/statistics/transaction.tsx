@@ -1,10 +1,10 @@
 import './transaction.css';
-import game from '../assets/game.svg';
-import polo from '../assets/polo.svg';
-import briyana from '../assets/briyani.svg';
-import taxi from '../assets/taxi.svg';
-import keyboard from '../assets/keyboard.svg';
-import right from '../assets/right.svg';
+import game from '../../assets/game.svg';
+import polo from '../../assets/polo.svg';
+import briyana from '../../assets/briyani.svg';
+import taxi from '../../assets/taxi.svg';
+import keyboard from '../../assets/keyboard.svg';
+import right from '../../assets/right.svg';
 import { FC, useState } from "react";
 
 const all: Array<object> = [

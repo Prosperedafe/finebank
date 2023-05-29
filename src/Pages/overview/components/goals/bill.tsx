@@ -1,6 +1,6 @@
-import right from '../../../assets/chevrons-right.svg';
-import figma from '../../../assets/Figma.svg';
-import adobe from '../../../assets/Adobe.svg';
+import right from '../../../../assets/chevrons-right.svg';
+import figma from '../../../../assets/Figma.svg';
+import adobe from '../../../../assets/Adobe.svg';
 
 export const Bill = () => {
     return (

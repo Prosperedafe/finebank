@@ -1,8 +1,8 @@
-import './plans.css';
-import url from '../../../assets/url.svg';
-import mastercard from '../../../assets/Mastercard-Logo 1.svg';
-import left from '../../../assets/left.svg';
-import right from '../../../assets/right.svg';
+import './plans.css'
+import url from '../../../../assets/url.svg';
+import mastercard from '../../../../assets/Mastercard-Logo 1.svg';
+import left from '../../../../assets/left.svg';
+import right from '../../../../assets/right.svg';
 
 export const TotalBalance = () => {
     return (

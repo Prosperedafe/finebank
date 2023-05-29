@@ -1,11 +1,11 @@
 import './overview.css';
 import { FC } from "react";
-import { Bill } from './components/bill';
-import { Goals } from './components/goals';
-import { Statistics } from './components/statistics';
-import { Transaction } from './components/transaction';
+import { Bill } from './components/goals/bill';
+import { Goals } from './components/goals/goals';
+import { Statistics } from './components/statistics/statistics';
+import { Transaction } from './components/statistics/transaction';
 import { PagesHeader } from "../../components/dashboard/header";
-import { TotalBalance } from "./components/totalBalance";
+import { TotalBalance } from "./components/goals/totalBalance";
 
 const OverView: FC = () => {
 

@@ -1,7 +1,7 @@
-import pen from '../../../assets/pen.svg';
-import award from '../../../assets/Award.svg';
-import graph from '../../../assets/Graph.svg';
-import target from '../../../assets/octicon_goal-16.svg';
+import pen from '../../../../assets/pen.svg';
+import award from '../../../../assets/Award.svg';
+import graph from '../../../../assets/Graph.svg';
+import target from '../../../../assets/octicon_goal-16.svg';
 
 export const Goals = () => {
     return (
