@@ -31,7 +31,7 @@
 }
 
 .overview .transactions .stats {
-    flex-grow: 3;
+    flex-grow: 7;
     flex-basis: 550px;
     margin: 0 auto;
     display: grid;
