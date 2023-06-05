@@ -39,7 +39,7 @@ const links: Array<object> = [
     },
     {
         path: '/settings',
-        name: 'Settimgs',
+        name: 'Settings',
         icon: settings,
     },
 ]

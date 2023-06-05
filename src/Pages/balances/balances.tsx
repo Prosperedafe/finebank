@@ -1,14 +1,100 @@
 import { PagesHeader } from "../../components/dashboard/header";
+import './balances.css'
+import mastercard from './assets/Mastercard-Logo 1.svg'
+import arrow from './assets/arrow.svg'
+import visa from './assets/visa.svg'
 
+const balances: Array<object> = [
+    {
+        text: "Credit Card",
+        role: "Master card",
+        img: mastercard,
+        rollNo: "3388 4556  8860 8**",
+        price:"$25000",
+    },
+    {
+        text:"Checking",
+        role: "Add Banks ltd",
+        img: visa,
+        rollNo:"693 456  69 9****",
+        price:"$25000",
+    },
+    {
+        text:"Savings",
+        role:"Brac", 
+        rollNo:"133 456  886 8****",
+        price:"$25000",
+    },
+    {
+        text:'Investment', 
+        role:"AB Bank LTD",
+        rollNo:"698 456  866 2****",
+        price:"$2500",
+    },
+    {
+        text:"Loan",
+        role:"City Bank",
+        rollNo:"363 456  896 6****",
+        price:"$25000",
+    },
+]
 const Balances = () => {
     return (
         <>
+            <section className="balances">
             <PagesHeader />
-        <section className="balances">
-            Balances
-            <div className="card"></div>
-            <h5>credit card</h5>
-        </section>
+                <h4>Balances</h4>
+            <div>
+                {balances.map((balance: object | any, index: number) => {
+                    return(
+                        <>
+                        <div key={index} className="card">
+                        <div className="preview">
+                            <div>
+                           <h5>{balance.text}</h5> 
+                            </div>
+                           <div className="cards">
+                            <div>
+                            <h5>{balance.role}</h5>
+                            </div>
+                            <figure>
+                            <img src={balance.img} alt=""/>
+                            </figure>
+                            </div>
+                            </div>
+                            <div className="number">
+                        <h6>{balance.rollNo}</h6>
+                        <p>Account Number</p>
+                        </div>
+                        <div className="number">
+                        <h6>{balance.price}</h6>
+                        <p>Total Amount</p>
+                        </div>
+                        <div className="details">
+                        <div>
+                        <p id="remove">Remove</p>
+                        </div>
+                        <div className="detailed">
+                            <div>
+                     <button className="detail">Details</button>
+                     </div>
+                     <figure>
+                     <img src={arrow}/>
+                     </figure>
+                     </div>
+                        </div>
+                        </div>
+                </>
+                    )
+                })}
+                <div className="card">
+                    <div className="account">
+                    <button className="add">Add Accounts</button>
+                    <p>Edit Accounts</p>
+                    </div>
+                </div>
+                </div>
+                </section>
         </>
     )
 }
