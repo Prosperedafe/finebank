@@ -32,6 +32,7 @@ function App() {
             <Route path='/signup' element={<Signup />} />
             <Route path='/forgotpassword' element={<ForgotPassword />} />
             <Route path='/balances' element={<Balances />} />
+            {/* <Route path='./goals'  element={<Goals />} /> */}
           </Routes>
         </main>
       </div>
