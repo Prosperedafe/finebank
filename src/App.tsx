@@ -7,6 +7,7 @@ import { ForgotPassword } from './Pages/register/forgotPassword';
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import SideNav from './components/navigation/sidenav';
 import Balances from './Pages/balances/balances';
+import Transaction from './Pages/transactions/transactions';
 
 function App() {
   //  console.log(window.location.href);
@@ -32,7 +33,7 @@ function App() {
             <Route path='/signup' element={<Signup />} />
             <Route path='/forgotpassword' element={<ForgotPassword />} />
             <Route path='/balances' element={<Balances />} />
-            {/* <Route path='./goals'  element={<Goals />} /> */}
+            <Route path='/transaction' element={<Transaction />} />
           </Routes>
         </main>
       </div>
