@@ -1,72 +1,87 @@
-.balances h4{
-    color:#878787;
+.balances h4 {
+    color: #878787;
+    margin-top: 1rem;
 }
-.balances h5{
+
+.balances h5 {
     font-size: 1rem;
-    color:#666666;
+    color: #666666;
     font-weight: 700;
-    font-family: 'inter','helvetica';
 }
-.balances h6{
+
+.balances h6 {
     font-size: 1.2rem;
-    color:#191919;
-    font-weight: 600;
-    font-family: 'helvetica','inter';
+    color: #191919;
+    font-weight: 700;
 }
-.balances p{
+
+.balances p {
     font-size: 1rem;
     color: #9F9F9F;
     padding: .5rem 0;
-    font-family: 'inter',"helvetica";
     font-weight: 500;
 }
-.balances{
+
+.balances {
     padding: 1rem 1rem 3rem 1rem;
 
 }
-.balances > div{
+
+.balances>div {
     display: flex;
     flex-wrap: wrap;
-    gap:1rem;
+    gap: 1rem;
     margin: 1rem 0;
 }
-.card{
+
+.card {
     background-color: white;
-    justify-content: space-between;
     flex-basis: 300px;
     flex-grow: 1;
-    border-radius: 10px;
-    padding: .8rem 2rem;
+    border-radius: 8px;
+    padding: 1rem;
     max-width: 400px;
     margin: 0 auto;
 }
-.preview{
+
+.cards p {
+    font-size: .9rem;
+    color: hsla(0, 0%, 40%, 1);
+}
+
+.preview {
     display: flex;
     align-items: center;
     justify-content: space-between;
     border-bottom: 1px solid #D2D2D2;
-    padding: .8rem 0;
-} 
-.cards{
+    padding: 0 0 .8rem 0;
+}
+
+.cards {
     display: flex;
     align-items: center;
-    gap:.2rem;
+    gap: .2rem;
 }
-.number{
-    margin: 1rem 0;
+
+.number {
+    margin: .7rem 0;
 }
-.details{
+
+.details {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-#remove{
-    color:#299D91;
+
+#remove {
+    color: #299D91;
     font-family: 'inter';
     font-weight: 400;
-    font-size: 1.1rem;
+    font-size: 1rem;
+    font-weight: 600;
 }
-.detailed{
+
+.detailed {
     display: flex;
     align-items: center;
     gap: 1rem;
@@ -74,21 +89,25 @@
     background-color: #299D91;
     border-radius: 4px;
 }
-.detail{
+
+.detail {
     background-color: #299D91;
-    color:white;
-    font-family: 'inter','helvetica';
+    color: white;
+    font-family: 'inter', 'helvetica';
     border: none;
     font-size: 1rem;
 }
-.account{
-    margin:4rem auto;
+
+.account {
+    margin: 4rem auto;
     text-align: center;
 }
-.account p{
+
+.account p {
     margin: 1rem 0;
 }
-.add{
+
+.add {
     padding: 1rem 4rem;
     background-color: #299D91;
     color: white;
