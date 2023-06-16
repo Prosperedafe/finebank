@@ -1,6 +1,6 @@
 .total_balance>div,
 .goals>div,
-.bills {
+.overview__bills {
     background: #FFFFFF;
     box-shadow: 0px 20px 25px rgba(76, 103, 100, 0.1);
     border-radius: 8px;
@@ -125,13 +125,13 @@
 
 /* bills */
 
-.bills_heading {
+.overview__bills__heading {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.bills_heading button {
+.overview__bills__heading button {
     border: none;
     background: transparent;
     font-size: .85rem;
@@ -142,25 +142,25 @@
     gap: 5px;
 }
 
-.bills {
+.overview__bills {
     display: flex;
     flex-direction: column;
     justify-content: center;
     gap: 1rem;
 }
 
-.bills .divider {
+.overview__bills .divider {
     background: #F3F3F3;
     height: 2px;
 }
 
-.bills>div {
+.overview__bills>div {
     display: flex;
     align-items: center;
     gap: 10px;
 }
 
-.bills>div>button {
+.overview__bills>div>button {
     display: inline-block;
     margin-left: auto;
     background: #FFFFFF;
