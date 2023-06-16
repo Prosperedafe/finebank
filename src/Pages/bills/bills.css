@@ -1,0 +1,48 @@
+.bill{
+    padding: 2rem;
+}
+.bill h4{
+    padding: 1rem ;
+}
+.bill-intro{
+    background-color: white;
+    padding: 2rem;
+    border-radius: 10px;
+}
+.bill-intro table{
+    width: 100%;
+}
+.bill-intro th{
+    border-bottom:1px solid #9F9F9F;
+}
+.bill-intro h5{
+ color:#191919;
+ margin: 1rem 0;
+}
+.bill td{
+    padding: 2rem;
+}
+.bill td span{
+    color:#9F9F9F;
+    font-size: .8rem;
+    padding: 2rem 0;
+}
+.bill .number{
+    color: black;
+}
+.bill p{
+    color:#9F9F9F;
+    font-size: .9rem;
+}
+.month{
+padding: .5rem 1rem;
+border: none;
+}
+.amount{
+    border: 1px solid #E8E8E8;
+    background-color: white;
+    color:#191919;
+    font-size: 18px;
+    padding: .6rem .8rem;
+    border-radius: 8px;
+}
