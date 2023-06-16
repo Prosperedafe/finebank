@@ -1,10 +1,6 @@
 import './transaction.css';
 import gamepad from './assests/gamepad.svg';
-// import keyboard from './assests/keyboard.png';
-// import plate from './assests/plate.png';
-// import ticket from './assests/plate.png';
 import Trasnport from './assests/Trasnport.svg';
-// import polo from './assests/polo.svg';
 import { PagesHeader } from '../../components/dashboard/header';
 import { FC, useState } from "react";
 
@@ -75,9 +71,7 @@ export const Transaction: FC = () => {
     <>
       <PagesHeader />
       <section className='transaction'>
-        <div className='transact'>
-          <h4>Recent Transaction</h4>
-        </div>
+          <h2>Recent Transaction</h2>
         <div className="main">
           <hgroup>
             <button onClick={() => setTab(1)} className={tab === 1 ? 'current' : ''}>All</button>
@@ -131,6 +125,5 @@ export const Transaction: FC = () => {
     </>
   )
 }
-// )
-// }
+
 export default Transaction;
