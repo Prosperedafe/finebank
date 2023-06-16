@@ -70,9 +70,9 @@ const transaction: Array<object> = [
 export const Transaction: FC = () => {
 
   const [tab, setTab] = useState<number>(1);
+
   return (
     <>
-
       <PagesHeader />
       <section className='transaction'>
         <div className='transact'>
@@ -111,8 +111,8 @@ export const Transaction: FC = () => {
                 return (
                   <tr key={index}>
                     <td className="items">
-                        <img src={transaction.img} alt={transaction.text}/>
-                        <span>{transaction.text}</span>
+                      <img src={transaction.img} alt={transaction.text} />
+                      <span>{transaction.text}</span>
                     </td>
                     <td><span>{transaction.name}</span></td>
                     <td><span>{transaction.date}</span></td>
