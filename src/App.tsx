@@ -9,18 +9,9 @@ import SideNav from './components/navigation/sidenav';
 import Balances from './Pages/balances/balances';
 import Transaction from './Pages/transactions/transactions';
 import Bills from './Pages/bills/bills';
+import Expenses from './Pages/expenses/expenses';
 
 function App() {
-  //  console.log(window.location.href);
-
-  // /about
-  // console.log(window.location.pathname);
-
-  // http:
-  // console.log(window.location.protocol);
-
-  // localhost
-  // console.log(window.location.hostname);
 
   return (
     <BrowserRouter>
@@ -35,7 +26,8 @@ function App() {
             <Route path='/forgotpassword' element={<ForgotPassword />} />
             <Route path='/balances' element={<Balances />} />
             <Route path='/transaction' element={<Transaction />} />
-            <Route path ='/bills' element={<Bills />}/>
+            <Route path='/bills' element={<Bills />} />
+            <Route path='/expenses' element={<Expenses />} />
           </Routes>
         </main>
       </div>

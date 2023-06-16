@@ -3,6 +3,10 @@
     margin-top: 1rem;
 }
 
+.balances * {
+    /* border: 1px solid red; */
+}
+
 .balances h5 {
     font-size: 1rem;
     color: #666666;
@@ -24,7 +28,6 @@
 
 .balances {
     padding: 1rem 1rem 3rem 1rem;
-
 }
 
 .balances>div {
