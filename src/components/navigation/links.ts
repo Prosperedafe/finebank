@@ -18,7 +18,7 @@ const links: Array<object> = [
         icon: balance,
     },
     {
-        path: '/transactions',
+        path: '/transaction',
         name: 'Transactions',
         icon: transaction,
     },

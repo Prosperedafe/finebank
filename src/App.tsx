@@ -8,6 +8,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import SideNav from './components/navigation/sidenav';
 import Balances from './Pages/balances/balances';
 import Transaction from './Pages/transactions/transactions';
+import Bills from './Pages/bills/bills';
 
 function App() {
   //  console.log(window.location.href);
@@ -34,6 +35,7 @@ function App() {
             <Route path='/forgotpassword' element={<ForgotPassword />} />
             <Route path='/balances' element={<Balances />} />
             <Route path='/transaction' element={<Transaction />} />
+            <Route path ='/bills' element={<Bills />}/>
           </Routes>
         </main>
       </div>

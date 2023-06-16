@@ -1,32 +1,80 @@
 .transaction{
-    padding: 2rem;
-    border-radius: 10px;
+    padding:  1rem 2rem;
 }
-.transaction h4{
-    font-size: 1rem;
-    color:#878787;
-}
-.transaction h5{
-    font-size: .9rem;
-    color:#666666;
-}
-.transaction h6{
-    color:#191919;
-    font-size: 1rem;   
-}
-.transacts{
-    
-}
-.transact{
+.transacted{
+    border-radius: 16px;
     background-color: white;
-    display:flex;
-    align-items:center;
-    justify-content: space-between;
-    border-bottom:1px solid #D2D2D240;
-    padding: .5rem 1rem;
+    padding: 0 0 .8rem 0;
 }
-.flex-1{
+.transaction hgroup .current {
+    color: #299D91;
+    border-bottom: 2px solid #299D91;  
+}
+.transaction .main {
+    color:#878787;
+    margin: 1rem 0;
+}
+.main button{
+    margin:0  1rem;   
+    font-size: 1rem;
+    background-color: transparent;
+    color:#878787;
+    border: none;
+}
+.items{
+    padding:.5rem 1rem;
+    gap:.7rem;
     display: flex;
     align-items: center;
-    gap:1rem;
+}
+table{
+    min-width:1000px;
+    padding: 2rem 1rem 0 1rem;
+}
+th{
+    font-family: 'inter','helvetica';
+    text-align: center;
+    border-bottom: 1px solid #D2D2D240;
+    padding: .2rem 0 1rem 0;
+    font-size: 1rem;
+    color:black;
+}
+th:nth-child(1){
+    text-align: left;
+    padding: 0 1rem;
+    
+}
+td{
+    border-bottom: 1px solid #D2D2D240;  
+    text-align: center;
+    color:#878787;
+    font-size: 1rem;
+    font-weight: 600;
+}
+table span{
+    padding: .8rem 0;
+}
+
+td:nth-child(1), td:nth-child(5){
+    color:black;
+}
+
+.transaction h6{
+    font-weight: 500;
+font-family: 'inter';
+    color:#878787;
+    font-size: 1rem;   
+}
+.more{
+    text-align: center;
+    display: block;
+    margin: 2rem auto;
+}
+.load-more{
+    background-color:#299D91;
+    color:white;
+    padding: 1rem 3rem;
+    font-family: 'inter';
+    border: none;
+    border-radius: 4px;
 }
