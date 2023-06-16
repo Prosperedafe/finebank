@@ -4,14 +4,14 @@ import adobe from '../../../../assets/Adobe.svg';
 
 export const Bill = () => {
     return (
-        <section className="bill">
-            <div className="bills_heading">
+        <section className="overview__bill">
+            <div className="overview__bills__heading">
                 <h3>Upcoming Bill</h3>
                 <button>
                     <span>View All</span><img src={right} alt="" />
                 </button>
             </div>
-            <div className="bills">
+            <div className="overview__bills">
                 <div>
                     <div style={{ textAlign: 'center', background: 'rgba(210, 210, 210, 0.25)', borderRadius: '8px', padding: '10px 8px' }}>
                         <p style={{ fontSize: '.85rem', fontWeight: '500', color: '#666666', marginBottom: '7px' }}>May</p>
