@@ -1,37 +1,89 @@
-// import { PagesHeader } from "../../components/dashboard/header";
-//   import Housing from './assests/Housing.svg';
-//   import food from './assests/food.png';
-//   import transportation from './assests/transportation.svg';
-//   import icon from './assests/Icon.svg';
-//   import shopping from './assests/shopping.svg';
-//   import other from './assests/other.svg';
-//   import graphed from './assests/graphed.svg';
-//   import Graph from './assests/Graph.svg';
-//   const goals: Array<object> = [
-//     {
-//    text: "Housing",
-//    img: Housing,
-//    price:"$250.00",
-//     },
-//     {
-//         text:"Food",
-//         img:food,
-//         price:"$250.00",
-//     },
-//     {
-//         text:"Transportation",
-//         img:transportation,
-//         price:"$250.00",
-//     }
+import './goal.css';
+import food from './assests/food.png';
+import edit from './assests/edit.svg';
+import other from './assests/other.svg';
+import Housing from './assests/Housing.svg';
+import shopping from './assests/shopping.svg';
+import { Saving } from "./components/saving";
+import { Summary } from "./components/summary";
+import entertainment from './assests/entertainment.svg';
+import transportation from './assests/transportation.svg';
+import { PagesHeader } from "../../components/dashboard/header";
 
-//   ]
-// const Goals = () =>{
-//     return(
-//         <>
-//     <PagesHeader />
-//     <h1>return</h1>
+interface content {
+    content: string
+}
 
-//     </>
-//     )
-// }
-// export default Goals;
+export const AdjustBtn = (props: content) => {
+    return (
+        <button className="goals__adjust"><span>{props.content}</span><img src={edit} alt="" /></button>
+    )
+}
+
+const goals: Array<object> = [
+    {
+        name: "Housing",
+        img: Housing,
+        price: "$250.00",
+    },
+    {
+        name: "Food",
+        img: food,
+        price: "$250.00",
+    },
+    {
+        name: "Transportation",
+        img: transportation,
+        price: "$250.00",
+    },
+    {
+        name: "Entertainment",
+        img: entertainment,
+        price: "$250.00",
+    },
+    {
+        name: "Shopping",
+        img: shopping,
+        price: "$250.00",
+    },
+    {
+        name: "Others",
+        img: other,
+        price: "$250.00",
+    },
+]
+
+const Goals = () => {
+    return (
+        <>
+            <PagesHeader />
+            <section className="goals">
+                <h3>Goals</h3>
+                <div className="goals__saving">
+                    <Saving />
+                    <Summary />
+                </div>
+                <section className="goals__expenses__category">
+                    <h3>Expenses Goals by Category</h3>
+                    <div>
+                        {goals.map((goal: any, index: number) => {
+                            return (
+                                <div className="goals__expenses__category__type" key={index}>
+                                    <div>
+                                        <img src={goal.img} alt={goal.name} />
+                                        <div>
+                                            <h5>{goal.name}</h5>
+                                            <p>{goal.price}</p>
+                                        </div>
+                                    </div>
+                                    <AdjustBtn content='Adjust' />
+                                </div>
+                            )
+                        })}
+                    </div>
+                </section>
+            </section>
+        </>
+    )
+}
+export default Goals;

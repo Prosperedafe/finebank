@@ -1,0 +1,229 @@
+.goals {
+    padding: 1rem 1rem 3rem 1rem;
+}
+
+.goals h3 {
+    color: #878787;
+    font-size: 1.3rem;
+    font-weight: 400;
+}
+
+.goals h4 {
+    color: hsla(240, 2%, 33%, 1);
+    font-size: 1rem;
+    font-weight: 400;
+    font-weight: 600;
+}
+
+.goals__saving {
+    display: grid;
+    grid-template-columns: 370px 1fr;
+    gap: 1rem;
+}
+
+@media(max-width: 1200px) {
+    .goals__saving {
+        grid-template-columns: 350px 1fr;
+    }
+}
+
+@media(max-width: 1100px) {
+    .goals__saving {
+        grid-template-columns: auto;
+    }
+
+    .goals__saving>div {
+        width: 100%;
+        max-width: 400px;
+        margin: .7rem auto 0 auto;
+    }
+
+    .goals__saving>div:nth-child(1) {
+        max-width: 500px;
+    }
+
+    .goals__saving>div:nth-child(2) {
+        max-width: 700px;
+    }
+}
+
+.goals__saving>div {
+    background: #FFFFFF;
+    box-shadow: 0px 20px 25px rgba(76, 103, 100, 0.1);
+    border-radius: 8px;
+    padding: 1rem 1rem;
+    margin-top: .7rem;
+}
+
+.goals__saving__heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(210, 210, 210, 0.25);
+    padding-bottom: .7rem;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.goals__saving__heading button {
+    background: rgba(210, 210, 210, 0.25);
+    border: 1px solid #E8E8E8;
+    border-radius: 4px;
+    color: #666666;
+    font-size: .8rem;
+    font-weight: 500;
+    padding: .6rem 1rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.goals__saving .target {
+    margin: 0.9rem 0 0 0;
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@media(max-width: 330px) {
+    .goals__saving .target {
+        flex-wrap: wrap;
+    }
+}
+
+.goals__saving .target>div {
+    margin: auto;
+}
+
+.goals__saving .targets {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.goals__saving .graph>div {
+    display: flex;
+    justify-content: space-between;
+}
+
+.goals__saving .graph>p {
+    color: #191919;
+    font-size: .8rem;
+    font-weight: 600;
+    margin-top: 0.55rem;
+    text-align: center;
+}
+
+.goals__saving .graph div p {
+    color: #D1D1D1;
+    font-size: .8rem;
+    font-weight: 600;
+}
+
+.goals__saving .graph div p:nth-child(2) {
+    color: #191919;
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.goals__adjust {
+    border: 1px solid #299D91;
+    border-radius: 4px;
+    color: #299D91;
+    font-size: .95rem;
+    font-weight: 500;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    gap: .6rem;
+    padding: .6rem 1.5rem;
+    margin: 1.5rem auto .5rem auto;
+}
+
+.goals__saving__summary__heading {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.goals__saving__summary__heading__drop {
+    display: flex;
+}
+
+.goals__saving__summary__heading__drop button {
+    display: flex;
+    align-items: center;
+    color: hsla(0, 0%, 40%, 1);
+    font-size: .8rem;
+    background-color: transparent;
+    border: none;
+    gap: .5rem;
+    margin-left: 1.5rem;
+}
+
+.goals__saving__summary>img {
+    width: 100%;
+    margin-top: 1rem;
+}
+
+/* Goals cetegory */
+
+.goals__expenses__category {
+    margin: 2.5rem 0;
+}
+
+.goals__expenses__category h5 {
+    color: #9F9F9F;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.goals__expenses__category p {
+    color: #191919;
+    font-size: calc(1rem + 2px);
+    font-weight: 700;
+    margin-top: .4rem;
+}
+
+.goals__expenses__category button {
+    margin: 0;
+    flex-shrink: 0;
+    font-size: .9rem;
+    padding: .6rem 1rem;
+}
+
+.goals__expenses__category>div {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: .7rem;
+}
+
+.goals__expenses__category__type {
+    flex-grow: 1;
+    flex-basis: 300px;
+    background: #FFFFFF;
+    box-shadow: 0px 12px 16px rgba(76, 103, 100, 0.05);
+    border-radius: 8px;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    margin: auto;
+    max-width: 450px;
+}
+
+@media(max-width: 340px) {
+    .goals__expenses__category__type {
+        flex-direction: column;
+    }
+}
+
+.goals__expenses__category__type>div {
+    display: flex;
+    align-items: center;
+    gap: .7rem;
+}

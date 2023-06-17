@@ -6,7 +6,7 @@ import target from '../../../../assets/octicon_goal-16.svg';
 export const Goals = () => {
     return (
         <>
-            <section className="goals">
+            <section className="overview__goals">
                 <h3>Goals</h3>
                 <div>
                     <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', borderBottom: '1px solid #F3F3F3', paddingBottom: '.7rem' }}>

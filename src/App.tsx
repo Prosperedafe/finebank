@@ -10,6 +10,7 @@ import Balances from './Pages/balances/balances';
 import Transaction from './Pages/transactions/transactions';
 import Bills from './Pages/bills/bills';
 import Expenses from './Pages/expenses/expenses';
+import Goals from './Pages/goals/goal';
 
 function App() {
 
@@ -28,6 +29,7 @@ function App() {
             <Route path='/transaction' element={<Transaction />} />
             <Route path='/bills' element={<Bills />} />
             <Route path='/expenses' element={<Expenses />} />
+            <Route path='/goals' element={<Goals />} />
           </Routes>
         </main>
       </div>

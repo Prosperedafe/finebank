@@ -37,38 +37,6 @@
     margin-left: .5rem;
 }
 
-.expenses__comparison__heading button {
-    margin-left: .5rem;
-    background-color: transparent;
-    border: none;
-    color: #525256;
-    font-size: .8rem;
-    font-weight: 500;
-    position: relative;
-}
-
-.expenses__comparison__heading button:nth-child(1) {
-    margin-right: 2.5rem;
-}
-
-.expenses__comparison__heading button::before {
-    content: '';
-    display: block;
-    background: #E8E8E8;
-    border-radius: 2px;
-    height: 8px;
-    width: 16px;
-    position: absolute;
-    top: 3.5px;
-    left: -25px;
-    margin-left: 1rem;
-    margin-right: 1rem;
-}
-
-.expenses__comparison__heading button:nth-child(1):before {
-    background: #299D91;
-}
-
 .expenses__breakdown {
     display: flex;
     gap: 1.5rem;

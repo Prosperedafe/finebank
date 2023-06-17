@@ -1,0 +1,32 @@
+.month__filter {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.month__filter button {
+    border: none;
+    color: #525256;
+    font-size: .8rem;
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: transparent;
+}
+
+.month__filter button:nth-child(1) span {
+    display: inline-block;
+    height: 7px;
+    width: .9rem;
+    background-color: #299D91;
+    border-radius: 2px;
+}
+
+.month__filter button:nth-child(2) span {
+    display: inline-block;
+    height: 7px;
+    width: .9rem;
+    background-color: #adaaaa;
+    border-radius: 2px;
+}

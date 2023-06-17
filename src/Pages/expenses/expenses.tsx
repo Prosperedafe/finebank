@@ -4,6 +4,7 @@ import graph from './assets/Graph.svg';
 import housing from './assets/housing.svg';
 import arrowup from './assets/uparrow.svg';
 import { PagesHeader } from '../../components/dashboard/header';
+import { Month } from '../../components/components';
 
 const expenses: Array<object> = [
     {
@@ -101,11 +102,9 @@ const Expenses = () => {
                 <div className="expenses__comparison">
                     <h3>Expenses Comparison</h3>
                     <div>
-                        <div className="expenses__comparison__heading"><h4><span>Monthly Comparison</span><img src={drop} alt="" /></h4>
-                            <div>
-                                <button>This Week</button>
-                                <button>Last Week</button>
-                            </div>
+                        <div className="expenses__comparison__heading">
+                            <h4><span>Monthly Comparison</span><img src={drop} alt="" /></h4>
+                            <Month content1='This week' content2='Last Week' />
                         </div>
                         <img src={graph} alt="graph" />
                     </div>

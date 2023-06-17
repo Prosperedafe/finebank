@@ -1,6 +1,7 @@
 import './transaction.css';
 import graph from '../../assets/Graph.svg';
 import arrowdown from '../../assets/arrow-down.svg';
+import { Month } from '../../../../components/components';
 
 export const Statistics = () => {
     return (
@@ -9,14 +10,7 @@ export const Statistics = () => {
             <div>
                 <div className="overview_statistics_filter">
                     <h4><span>Weekly Comparison</span><img src={arrowdown} alt="" /></h4>
-                    <div>
-                        <button>
-                            <span></span>This week
-                        </button>
-                        <button>
-                            <span></span>Last Week week
-                        </button>
-                    </div>
+                    <Month content1='This week' content2='Last Week' />
                 </div>
                 <img src={graph} className='graph' alt="graph" />
             </div>
