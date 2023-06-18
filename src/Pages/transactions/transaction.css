@@ -2,12 +2,19 @@
   padding: 1rem 1rem 3rem 1rem;
 }
 
-.transaction .transacted {
+.transaction .table__section__wrapper {
   border-radius: 16px;
   background: white;
   padding: 0 0 0.8rem 0;
+}
+
+.transaction .table__section {
   overflow-x: scroll;
-  width: 100%;
+}
+
+.transaction .table__section::-webkit-scrollbar {
+  width: 0px;
+  height: 5px;
 }
 
 .transaction .main .current {

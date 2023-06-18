@@ -71,7 +71,7 @@ export const Transaction: FC = () => {
     <>
       <PagesHeader />
       <section className='transaction'>
-          <h2>Recent Transaction</h2>
+        <h2>Recent Transaction</h2>
         <div className="main">
           <hgroup>
             <button onClick={() => setTab(1)} className={tab === 1 ? 'current' : ''}>All</button>
@@ -79,44 +79,46 @@ export const Transaction: FC = () => {
             <button onClick={() => setTab(3)} className={tab === 3 ? 'current' : ''}>Expenses</button>
           </hgroup>
         </div>
-        <div className='transacted'>
-          <table>
-            <thead>
-              <tr>
-                <th>
-                  Items
-                </th>
-                <th>
-                  Shop Name
-                </th>
-                <th>
-                  Date
-                </th>
-                <th>
-                  Payment Method
-                </th>
-                <th>
-                  Amount
-                </th>
-              </tr>
-            </thead>
-            <tbody>
-              {transaction.map((transaction: object | any, index: number) => {
-                return (
-                  <tr key={index}>
-                    <td className="items">
-                      <img src={transaction.img} alt={transaction.text} />
-                      <span>{transaction.text}</span>
-                    </td>
-                    <td><span>{transaction.name}</span></td>
-                    <td><span>{transaction.date}</span></td>
-                    <td><span>{transaction.role}</span></td>
-                    <td><span>{transaction.price}</span></td>
-                  </tr>
-                )
-              })}
-            </tbody>
-          </table>
+        <div className="table__section__wrapper">
+          <div className="table__section">
+            <table>
+              <thead>
+                <tr>
+                  <th>
+                    Items
+                  </th>
+                  <th>
+                    Shop Name
+                  </th>
+                  <th>
+                    Date
+                  </th>
+                  <th>
+                    Payment Method
+                  </th>
+                  <th>
+                    Amount
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                {transaction.map((transaction: object | any, index: number) => {
+                  return (
+                    <tr key={index}>
+                      <td className="items">
+                        <img src={transaction.img} alt={transaction.text} />
+                        <span>{transaction.text}</span>
+                      </td>
+                      <td><span>{transaction.name}</span></td>
+                      <td><span>{transaction.date}</span></td>
+                      <td><span>{transaction.role}</span></td>
+                      <td><span>{transaction.price}</span></td>
+                    </tr>
+                  )
+                })}
+              </tbody>
+            </table>
+          </div>
           <div className='more'>
             <button className='load-more'>Load More</button>
           </div>
