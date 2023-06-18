@@ -3,6 +3,7 @@ import { Loader } from './components/loader';
 import { lazy, Suspense } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import SideNav from './components/navigation/sidenav';
+import ScrollToTop from './scrollToTop';
 import AuthenticatedRoute from './utils/authRoute';
 const Bills = lazy(() => import('./Pages/bills/bills'));
 const Goals = lazy(() => import('./Pages/goals/goal'));
@@ -21,6 +22,7 @@ function App() {
     <BrowserRouter>
       <div className="app">
         <SideNav />
+        <ScrollToTop />
         <main>
           <Suspense fallback={<Loader />}>
             <Routes>
