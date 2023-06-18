@@ -41,46 +41,44 @@ const balances: Array<object> = [
 const Balances = () => {
     return (
         <>
+            <PagesHeader />
             <section className="balances">
-                <PagesHeader />
-                <h4>Balances</h4>
+                <h3>Balances</h3>
                 <div>
                     {balances.map((balance: object | any, index: number) => {
                         return (
-                            <>
-                                <div key={index} className="card">
-                                    <div className="preview">
+                            <div key={index} className="card">
+                                <div className="preview">
+                                    <div>
+                                        <h5>{balance.text}</h5>
+                                    </div>
+                                    <div className="cards">
                                         <div>
-                                            <h5>{balance.text}</h5>
+                                            <p>{balance.role}</p>
                                         </div>
-                                        <div className="cards">
-                                            <div>
-                                                <p>{balance.role}</p>
-                                            </div>
-                                            <img src={balance.img} alt="" />
-                                        </div>
-                                    </div>
-                                    <div className="number">
-                                        <h6>{balance.rollNo}</h6>
-                                        <p>Account Number</p>
-                                    </div>
-                                    <div className="number">
-                                        <h6>{balance.price}</h6>
-                                        <p>Total Amount</p>
-                                    </div>
-                                    <div className="details">
-                                        <div>
-                                            <p id="remove">Remove</p>
-                                        </div>
-                                        <div className="detailed">
-                                            <div>
-                                                <button className="detail">Details</button>
-                                            </div>
-                                            <img src={arrow} />
-                                        </div>
+                                        <img src={balance.img} alt="" />
                                     </div>
                                 </div>
-                            </>
+                                <div className="number">
+                                    <h6>{balance.rollNo}</h6>
+                                    <p>Account Number</p>
+                                </div>
+                                <div className="number">
+                                    <h6>{balance.price}</h6>
+                                    <p>Total Amount</p>
+                                </div>
+                                <div className="details">
+                                    <div>
+                                        <p id="remove">Remove</p>
+                                    </div>
+                                    <div className="detailed">
+                                        <div>
+                                            <button className="detail">Details</button>
+                                        </div>
+                                        <img src={arrow} />
+                                    </div>
+                                </div>
+                            </div>
                         )
                     })}
                     <div className="card">
