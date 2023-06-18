@@ -26,17 +26,18 @@ function App() {
         <main>
           <Suspense fallback={<Loader />}>
             <Routes>
-              <Route element={<AuthenticatedRoute />} ></Route>
-              <Route path='/' element={<OverView />} />
-              <Route path='/login' element={<Login />} />
-              <Route path='/goals' element={<Goals />} />
-              <Route path='/bills' element={<Bills />} />
+              <Route path='login' element={<Login />} />
               <Route path='/signup' element={<Signup />} />
               <Route path='/welcome' element={<Welcome />} />
-              <Route path='/balances' element={<Balances />} />
-              <Route path='/expenses' element={<Expenses />} />
-              <Route path='/transaction' element={<Transaction />} />
               <Route path='/forgotpassword' element={<ForgotPassword />} />
+              <Route element={<AuthenticatedRoute />} >
+                <Route index path='/' element={<OverView />} />
+                <Route path='/goals' element={<Goals />} />
+                <Route path='/bills' element={<Bills />} />
+                <Route path='/balances' element={<Balances />} />
+                <Route path='/expenses' element={<Expenses />} />
+                <Route path='/transaction' element={<Transaction />} />
+              </Route>
             </Routes>
           </Suspense>
         </main>
