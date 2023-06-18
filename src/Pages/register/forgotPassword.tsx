@@ -2,7 +2,7 @@ import './forgotpassword.css'
 import { Link } from 'react-router-dom'
 import { Input, Logo, SignBtn } from "../../components/asset"
 
-export const ForgotPassword = () => {
+const ForgotPassword = () => {
     return (
         <section className="forgotpassword">
             <div>
@@ -19,3 +19,4 @@ export const ForgotPassword = () => {
         </section>
     )
 }
+export default ForgotPassword

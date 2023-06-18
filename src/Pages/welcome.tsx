@@ -1,7 +1,7 @@
 import { FC } from 'react';
 import '../styles/welcome.css';
 
-export const Welcome: FC = () => {
+const Welcome: FC = () => {
     return (
         <section id="welcome">
             <div>
@@ -24,3 +24,5 @@ export const Welcome: FC = () => {
         </section>
     )
 }
+
+export default Welcome;

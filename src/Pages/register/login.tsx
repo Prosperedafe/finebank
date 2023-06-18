@@ -8,7 +8,7 @@ import { useState } from 'react';
 import { Input, Logo } from "../../components/asset";
 import { GoogleBtn, SignBtn } from '../../components/asset';
 
-export const Login: FC = () => {
+const Login: FC = () => {
 
     const [type, setType] = useState<string>("password");
     const [icon, setIcon] = useState<any>(eyeOff);
@@ -56,3 +56,5 @@ export const Login: FC = () => {
         </section>
     )
 }
+
+export default Login;
