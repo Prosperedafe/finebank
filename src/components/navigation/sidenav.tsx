@@ -4,7 +4,7 @@ import links from './links';
 import logout from './icons/Logout.svg';
 import dp from './icons/profile.png';
 import options from './icons/options.svg';
-import { NavLink } from 'react-router-dom';
+import { NavLink, Link } from 'react-router-dom';
 
 const SideNav = () => {
     return (
@@ -29,14 +29,16 @@ const SideNav = () => {
                     <img src={logout} alt="logout" />
                     <span>Logout</span>
                 </button>
-                <div className="profile">
-                    <img className='dp' src={dp} alt="display profile" />
+                <Link to='/settings' className="profile">
                     <div>
-                        <p className='name'>Tanzir Rahman</p>
-                        <p className='view'>View profile</p>
+                        <img className='dp' src={dp} alt="display profile" />
+                        <div>
+                            <p className='name'>Tanzir Rahman</p>
+                            <p className='view'>View profile</p>
+                        </div>
+                        <img className='options' src={options} alt="options" />
                     </div>
-                    <img className='options' src={options} alt="options" />
-                </div>
+                </Link>
             </div>
         </nav>
     )

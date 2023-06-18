@@ -39,7 +39,7 @@ nav li {
     width: 100%;
 }
 
-nav a {
+nav ul a {
     width: 100%;
     color: rgba(255, 255, 255, 0.7);
     display: flex;
@@ -81,7 +81,7 @@ nav .logout {
     margin-top: 4rem;
 }
 
-nav .profile {
+nav .profile>div {
     display: flex;
     gap: 10px;
     align-items: center;
@@ -158,11 +158,11 @@ nav .profile .view {
         gap: .5rem;
     }
 
-    nav a {
+    nav ul a {
         padding: .5rem .7rem;
     }
 
-    nav a img {
+    nav ul a img {
         height: 20px;
     }
 }
@@ -177,7 +177,7 @@ nav .profile .view {
         flex-basis: 50px;
     }
 
-    nav a {
+    nav ul a {
         max-width: fit-content;
     }
 }

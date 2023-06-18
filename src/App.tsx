@@ -11,6 +11,7 @@ import Transaction from './Pages/transactions/transactions';
 import Bills from './Pages/bills/bills';
 import Expenses from './Pages/expenses/expenses';
 import Goals from './Pages/goals/goal';
+import AuthenticatedRoute from './utils/authRoute';
 
 function App() {
 
@@ -20,6 +21,7 @@ function App() {
         <SideNav />
         <main>
           <Routes>
+            <Route element={<AuthenticatedRoute />} ></Route>
             <Route path='/' element={<OverView />} />
             <Route path='/welcome' element={<Welcome />} />
             <Route path='/login' element={<Login />} />
