@@ -1,0 +1,76 @@
+.settings {
+    padding: 1rem 1rem 3rem 1rem;
+    border-radius: 16px;
+    background: #FFFFFF;
+box-shadow: 0px 20px 25px rgba(76, 103, 100, 0.1);
+border-radius: 16px;
+margin: 1rem 1rem 3rem 1remeted;
+}
+
+.settings>div {
+    flex-wrap: wrap;
+}
+
+.settings hgroup {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 2rem;
+    row-gap: 1rem;
+}
+
+.settings hgroup button {
+    color: #9f9f9f;
+    background-color: transparent;
+    border: none;
+    font-size: 16px;
+    margin-bottom: 2rem;
+    padding: 1rem 0.5rem;
+}
+
+.settings hgroup .current {
+    border-bottom: 2px solid #299d91;
+    color: #299d91;
+}
+
+.settings .settings__account {
+    display: flex;
+    justify-content: space-between;
+    gap: 3rem;
+}
+
+.settings form {
+    flex-basis: 200px;
+}
+
+.settings label {
+    color: #525256;
+    font-size: 18px;
+}
+
+.settings input {
+    border: none;
+    padding: 1.4rem 0.7rem;
+    font-size: 0.9rem;
+}
+
+.settings .update {
+    padding: 1rem 2rem;
+    background: #299d91;
+    border: none;
+    color: white;
+    border-radius: 4px;
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.settings .profile {
+    flex-basis: 200px;
+}
+
+.settings .profile h3 {
+    color: #666666;
+}
+
+.settings .profile figure {
+    padding: 2rem 0;
+}
