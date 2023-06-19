@@ -1,59 +1,72 @@
 .bills {
-    padding: 2rem;
-}
-
-.bills h4 {
     padding: 1rem;
 }
-
+.bills h4 {
+    padding: 1rem 0;
+    font-size: 1.3rem;
+    color: #878787;
+    font-weight: 400;
+}
 .bill-intro {
     background-color: white;
     padding: 2rem;
-    border-radius: 10px;
+    border-radius: 16px;
+    overflow-x: scroll;
 }
-
 .bill-intro table {
     width: 100%;
+    min-width: 800px;
+    border-collapse: collapse;
 }
-
-.bill-intro th {
-    border-bottom: 1px solid #9F9F9F;
+.bill-intro thead {
+    position: relative;
+    text-align: left;
 }
-
+.bill-intro thead::after {
+    position: absolute;
+    background-color: rgba(210, 210, 210, 0.25);
+    content: "";
+    display: block;
+    height: 1px;
+    width: 100%;
+    top: 3rem;
+}
 .bill-intro h5 {
     color: #191919;
     margin: 1rem 0;
+    font-size: 16px;
 }
-
-.bills td {
+.bill-intro td {
     padding: 2rem;
+    padding-left: 0;
 }
+.bill-intro tbody tr:nth-child(1) td{
+    padding: 2rem;
+    padding-left: 0;
+    border-bottom: 1px solid rgba(210, 210, 210, 0.25);}
 
-.bills td span {
-    color: #9F9F9F;
-    font-size: .8rem;
-    padding: 2rem 0;
-}
-
-.bills .number {
-    color: black;
-}
-
-.bills p {
-    color: #9F9F9F;
-    font-size: .9rem;
-}
-
-.month {
-    padding: .5rem 1rem;
+.bills .month {
+    font-size: 16px;
+    padding: .7rem .4rem .2rem .6rem;
     border: none;
+    border-radius: 8px;
 }
-
-.amount {
-    border: 1px solid #E8E8E8;
+.bills .number {
+    font-weight: 800;
+    color: #525256;
+    font-size: 22px;
+}
+.bills p {
+    color: #9f9f9f;
+    font-size: 0.9rem;
+    line-height: 1.3rem;
+    max-width: 300px;
+}
+.bills .amount {
+    border: 1px solid #e8e8e8;
     background-color: white;
     color: #191919;
     font-size: 18px;
-    padding: .6rem .8rem;
+    padding: 0.6rem 0.8rem;
     border-radius: 8px;
 }
