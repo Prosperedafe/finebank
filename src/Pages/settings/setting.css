@@ -33,16 +33,13 @@ margin: 1rem 1rem 3rem 1;
     justify-content: space-between;
     gap: 3rem;
 }
-
 .settings form {
     flex-basis: 200px;
 }
-
 .settings label {
     color: #525256;
     font-size: 18px;
 }
-
 .settings input {
     border: none;
     padding: 1.4rem 0.7rem;

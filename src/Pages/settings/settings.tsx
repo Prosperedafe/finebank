@@ -9,7 +9,7 @@ export const Settings: FC = () => {
     <>
       <PagesHeader />
       <section className='settings'>
-        <div className=''>
+        <div className='setting'>
           <hgroup>
             <button onClick={() => setTab(1)} className={tab === 1 ? 'current' : ''}>Account</button>
             <button onClick={() => setTab(2)} className={tab === 2 ? 'current' : ''}>Security</button>
@@ -49,7 +49,7 @@ export const Settings: FC = () => {
               <label htmlFor="text" id="text">Retype Password</label><br></br>
               <input type="Pword" id="text" placeholder='************' /><br></br>
               <label htmlFor="number" id="number">Phone Number </label><br></br>
-              <input type="number" id="number" placeholder='+880  |  51547 58868' /><br></br>
+              <input type="number" id="number" placeholder='+880  |  51547 588698' /><br></br>
             </form>
             <button className='update'>Update Password</button>
           </>
