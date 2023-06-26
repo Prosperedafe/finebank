@@ -14,6 +14,7 @@ const Balances = lazy(() => import('./Pages/balances/balances'));
 const Expenses = lazy(() => import('./Pages/expenses/expenses'));
 const OverView = lazy(() => import('./Pages/overview/overview'));
 const Transaction = lazy(() => import('./Pages/transactions/transactions'));
+const Settings = lazy(() => import('./Pages/settings/settings'));
 const ForgotPassword = lazy(() => import('./Pages/register/forgotPassword'));
 
 function App() {
@@ -37,6 +38,7 @@ function App() {
                 <Route path='/balances' element={<Balances />} />
                 <Route path='/expenses' element={<Expenses />} />
                 <Route path='/transaction' element={<Transaction />} />
+                <Route path ='/settings' element={<Settings />}/>
               </Route>
             </Routes>
           </Suspense>
