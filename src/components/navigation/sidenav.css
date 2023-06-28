@@ -135,7 +135,7 @@ nav .profile .view {
         display: none;
     }
 
-    nav>div>img {
+    nav .logo {
         display: none;
         margin: auto;
     }

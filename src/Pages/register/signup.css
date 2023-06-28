@@ -35,11 +35,11 @@
     display: inline-block;
 }
 
-.signup label[for='email'] {
-    margin-top: 1.5rem;
+.signup input[type='email'] {
+    margin-bottom: 1.5rem;
 }
 
-.signup input[type='email'] {
+.signup input[type='text'] {
     margin-bottom: 1.5rem;
 }
 

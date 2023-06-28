@@ -2,6 +2,15 @@
     padding: 1rem 1rem 3rem 1rem;
 }
 
+.goals * {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.goals *::-webkit-scrollbar {
+    display: none;
+}
+
 .goals h3 {
     color: #878787;
     font-size: 1.3rem;
@@ -139,6 +148,10 @@
     gap: .6rem;
     padding: .6rem 1.5rem;
     margin: 1.5rem auto .5rem auto;
+}
+
+.goals__saving__summary {
+    min-width: 500px;
 }
 
 .goals__saving__summary__heading {

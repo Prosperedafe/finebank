@@ -24,13 +24,16 @@ const Signup: FC = () => {
     const handleSubmit = (e: any) => {
         e.preventDefault()
     }
+
     return (
         <section className="signup">
             <Logo />
             <h2>Create an account</h2>
             <form onSubmit={handleSubmit}>
-                <label htmlFor="name">Name</label>
-                <Input type='text' name='name' placeholder='Tanzir Rahman' />
+                <label htmlFor="name">First Name</label>
+                <Input type='text' name='name' placeholder='First name here' />
+                <label htmlFor="name">Last Name</label>
+                <Input type='text' name='name' placeholder='Last name here' />
                 <label htmlFor="email">Email</label>
                 <Input type='email' name='email' placeholder='hello@example.com' />
                 <label htmlFor="password">Password</label>
