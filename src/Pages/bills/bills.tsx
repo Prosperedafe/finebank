@@ -17,12 +17,12 @@ const Bills = () => {
                             <th>Item Description</th>
                             <th>Last Charge</th>
                             <th>Amount</th>
-                        </tr>
+                        </tr> 
                     </thead>
                     <tbody>
                         <tr>
                             <td>
-                                <button className="month">May <span className="number">15</span></button>
+                                <button className="month">May <p className="number">15</p></button>
                             </td>
                             <td>
                                 <img src={Figma} alt="figma" />
@@ -36,13 +36,13 @@ const Bills = () => {
                             <td>
                                 14 May, 2022
                             </td>
-                            <td>
+                            <  td>
                                 <button className="amount">$150</button>
                             </td>
                         </tr>
                         <tr>
                             <td>
-                                <button className="month">June <span className="number">16</span></button>
+                                <button className="month">June <p className="number">16</p></button>
                             </td>
                             <td>
                                 <img src={Adobe} />
