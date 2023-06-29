@@ -50,6 +50,7 @@ const Signup: FC = () => {
             const mail = values.email;
             const password = values.password;
             handleSaveAuth(firstname, lastname, mail, password);
+            window.location.replace("/")
         }
     }
 

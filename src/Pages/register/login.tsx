@@ -30,6 +30,7 @@ const Login: FC = () => {
     return (
         <section className="login">
             <Logo />
+            <h2>Login</h2>
             <form onSubmit={handleSubmit}>
                 <label htmlFor="email">Email Address</label><br />
                 <Input type='email' placeholder="johndeo@gmail.com" />
