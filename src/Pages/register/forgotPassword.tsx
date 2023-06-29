@@ -11,7 +11,7 @@ const ForgotPassword = () => {
                 <p>Enter your email address to get the password reset link.</p>
                 <form>
                     <label htmlFor="email">Email Address</label>
-                    <Input type='email' placeholder="hello@example.com" />
+                    <Input name='' value='email' onBlur='' onChange='' id="" className='' type='email' placeholder="hello@example.com" />
                     <SignBtn content='Password Reset' />
                 </form>
                 <Link to='/login'>Back to login</Link>

@@ -8,7 +8,7 @@ import Login from './Pages/register/login';
 import Signup from './Pages/register/signup';
 import SideNav from './components/navigation/sidenav';
 import ScrollToTop from './scrollToTop';
-// import ForgotPassword from './Pages/register/forgotPassword';
+import ForgotPassword from './Pages/register/forgotPassword';
 import AuthenticatedRoute from './utils/authRoute';
 import OpenRoutes from './utils/openRoutes';
 const Bills = lazy(() => import('./Pages/bills/bills'));
@@ -45,7 +45,7 @@ const App: FC = () => {
                 <Route path='login' element={<Login />} />
                 <Route path='/signup' element={<Signup />} />
                 <Route path='/welcome' element={<Welcome />} />
-                {/* <Route path='/forgotpassword' element={<ForgotPassword />} /> */}
+                <Route path='/forgotpassword' element={<ForgotPassword />} />
               </Route>
               <Route element={<AuthenticatedRoute />} >
                 <Route index path='/' element={<OverView />} />
