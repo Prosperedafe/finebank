@@ -7,13 +7,18 @@ import { FC, useState } from 'react';
 export const PagesHeader: FC = () => {
 
     const [visible] = useState<string>(window.location.pathname);
+    const authName = JSON.parse(localStorage.getItem("fb/fn/") as string)
+    let newDate = new Date()
+    let date = newDate.getDate();
+    let year = newDate.getFullYear();
+    const month = newDate.toLocaleString('default', { month: 'long' });
 
     return (
         <header className='pages_header'>
             <div className='name'>
-                {visible === '/' ? <h2>Hello Tanzir</h2> : ''}
+                {visible === '/' ? <h2>Hello {authName}</h2> : ''}
                 <img src={right} alt="" />
-                <p>May 19 2023</p>
+                <p>{`${month} ${date} ${year}`}</p>
             </div>
             <div className='notifications'>
                 <img src={notification} alt="notification" />

@@ -1,21 +1,24 @@
 import './assets.css';
 import google from '../assets/Google.svg';
 import logo from '../assets/logo.svg';
+import { FC } from "react";
 
 interface attributes {
     content?: string;
-    className?: string;
-    type?: string;
     onClick?: any;
-    placeholder?: string;
+    disabled?: any
 }
 
 interface inputs {
-    className?: string;
-    type?: any;
+    onBlur: any;
+    value: any;
+    id: string
+    onChange: any;
+    className: string;
+    type: any;
     onClick?: any;
-    placeholder?: string;
-    name?: string
+    placeholder: string;
+    name: string
 }
 
 export const Logo = () => {
@@ -24,10 +27,9 @@ export const Logo = () => {
     )
 }
 
-
 export const SignBtn = (props: attributes) => {
     return (
-        <button className='sign-btn'>
+        <button type='submit' className='sign-btn' disabled={props.disabled}>
             {props.content}
         </button>
     )
@@ -42,8 +44,8 @@ export const GoogleBtn = (props: attributes) => {
     )
 }
 
-export const Input = (props: inputs) => {
+export const Input: FC<inputs> = ({ onBlur, value, id, onChange, className, type, placeholder, name }) => {
     return (
-        <input className='form__input' name={props.name} type={props.type} placeholder={props.placeholder} />
+        <input autoComplete='on' className={`form__input ${className}`} onBlur={onBlur} value={value} name={name} id={id} onChange={onChange} type={type} placeholder={placeholder} />
     )
 }

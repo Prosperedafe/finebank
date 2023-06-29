@@ -12,7 +12,7 @@ nav>div {
     min-height: 100%;
     max-height: 100%;
     width: 100%;
-    padding: 3rem 1.5rem;
+    padding: 3rem 1rem;
     scrollbar-width: none;
     -ms-overflow-style: none;
 }
@@ -21,7 +21,7 @@ nav>div::-webkit-scrollbar {
     display: none;
 }
 
-nav>div>img {
+nav .logo {
     display: block;
     margin: auto;
 }

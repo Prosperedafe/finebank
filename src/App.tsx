@@ -2,6 +2,7 @@ import './App.css';
 import { Loader } from './components/loader';
 import { lazy, Suspense } from 'react';
 import { isAuthenticated } from './utils/helper';
+import { useEffect, useState, FC } from "react"
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Login from './Pages/register/login';
 import Signup from './Pages/register/signup';
@@ -9,6 +10,7 @@ import SideNav from './components/navigation/sidenav';
 import ScrollToTop from './scrollToTop';
 import ForgotPassword from './Pages/register/forgotPassword';
 import AuthenticatedRoute from './utils/authRoute';
+import OpenRoutes from './utils/openRoutes';
 const Bills = lazy(() => import('./Pages/bills/bills'));
 const Goals = lazy(() => import('./Pages/goals/goal'));
 const Welcome = lazy(() => import('./Pages/welcome'));
@@ -18,22 +20,33 @@ const OverView = lazy(() => import('./Pages/overview/overview'));
 const Transaction = lazy(() => import('./Pages/transactions/transactions'));
 const Settings = lazy(() => import('./Pages/settings/settings'));
 
-function App() {
+const App: FC = () => {
 
   const auth = isAuthenticated();
+  const [showNav, setShowNav] = useState<boolean>(false)
+
+  useEffect(() => {
+    if (auth) {
+      setShowNav(true)
+    } else {
+      setShowNav(false)
+    }
+  })
 
   return (
     <BrowserRouter>
       <div className={auth == true ? "app" : "app auth"}>
-        <SideNav />
+        {showNav ? < SideNav /> : null}
         <ScrollToTop />
         <main>
           <Suspense fallback={<Loader />}>
             <Routes>
-              <Route path='login' element={<Login />} />
-              <Route path='/signup' element={<Signup />} />
-              <Route path='/welcome' element={<Welcome />} />
-              <Route path='/forgotpassword' element={<ForgotPassword />} />
+              <Route element={<OpenRoutes />}>
+                <Route path='login' element={<Login />} />
+                <Route path='/signup' element={<Signup />} />
+                <Route path='/welcome' element={<Welcome />} />
+                <Route path='/forgotpassword' element={<ForgotPassword />} />
+              </Route>
               <Route element={<AuthenticatedRoute />} >
                 <Route index path='/' element={<OverView />} />
                 <Route path='/goals' element={<Goals />} />

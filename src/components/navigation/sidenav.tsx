@@ -3,7 +3,6 @@ import links from './links';
 import dp from './icons/profile.png';
 import options from './icons/options.svg';
 import { NavLink, Link } from 'react-router-dom';
-import { isAuthenticated } from '../../utils/helper';
 
 export const Logo = () => {
     return (
@@ -27,47 +26,56 @@ export const LogoutLogo = () => {
 
 const SideNav = () => {
 
-    const authenticated = isAuthenticated();
+    const fn = JSON.parse(localStorage.getItem("fb/fn/") as string)
+    const ln = JSON.parse(localStorage.getItem("fb/ln/") as string)
+    const ps = JSON.parse(localStorage.getItem("fb/ps/") as string)
+    const em = JSON.parse(localStorage.getItem("fb/em/") as string)
 
-    if (authenticated == true) {
-        return (
-            <nav>
-                <div>
-                    <Logo />
-                    <ul>
-                        {links.map((link: object | any, index: number) => {
-                            return (
-                                <li key={index}>
-                                    <NavLink className={({ isActive }) => (isActive ? "active" : "")} to={link.path}>
-                                        {link.icon}
-                                        <span>
-                                            {link.name}
-                                        </span>
-                                    </NavLink>
-                                </li>
-                            )
-                        })}
-                    </ul>
-                    <button className='logout'>
-                        <LogoutLogo />
-                        <span>Logout</span>
-                    </button>
-                    <Link to='/settings' className="profile">
-                        <div>
-                            <img className='dp' src={dp} alt="display profile" />
-                            <div>
-                                <p className='name'>Tanzir Rahman</p>
-                                <p className='view'>View profile</p>
-                            </div>
-                            <img className='options' src={options} alt="options" />
-                        </div>
-                    </Link>
-                </div>
-            </nav>
-        )
-    } else {
-        return null
+    const logout = () => {
+        localStorage.removeItem("fb/ps/")
+        localStorage.removeItem("fb/em/")
+        window.location.reload()
     }
+
+    // if (ps && em !== "") {
+    return (
+        <nav>
+            <div>
+                <Logo />
+                <ul>
+                    {links.map((link: object | any, index: number) => {
+                        return (
+                            <li key={index}>
+                                <NavLink className={({ isActive }) => (isActive ? "active" : "")} to={link.path}>
+                                    {link.icon}
+                                    <span>
+                                        {link.name}
+                                    </span>
+                                </NavLink>
+                            </li>
+                        )
+                    })}
+                </ul>
+                <button onClick={logout} className='logout'>
+                    <LogoutLogo />
+                    <span>Logout</span>
+                </button>
+                <Link to='/settings' className="profile">
+                    <div>
+                        <img className='dp' src={dp} alt="display profile" />
+                        <div>
+                            <p className='name'>{fn} {ln}</p>
+                            <p className='view'>View profile</p>
+                        </div>
+                        <img className='options' src={options} alt="options" />
+                    </div>
+                </Link>
+            </div>
+        </nav>
+    )
+    // } else {
+    //     return
+    // }
 }
 
 export default SideNav;

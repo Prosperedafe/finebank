@@ -1,8 +1,13 @@
-import { PagesHeader } from '../../components/dashboard/header';
-import { FC, useState } from "react";
-import Picture from './assest/Picture.svg';
 import './setting.css';
+import Picture from './assest/Picture.svg';
+import { FC, useState } from "react";
+import { PagesHeader } from '../../components/dashboard/header';
+
 export const Settings: FC = () => {
+
+  const fn = JSON.parse(localStorage.getItem("fb/fn/") as string)
+  const ln = JSON.parse(localStorage.getItem("fb/ln/") as string)
+  const em = JSON.parse(localStorage.getItem("fb/em/") as string)
 
   const [tab, setTab] = useState<number>(1);
   return (
@@ -21,9 +26,9 @@ export const Settings: FC = () => {
             <div>
               <form>
                 <label htmlFor='name' id="name">Full name</label><br></br>
-                <input type="name" id="name" placeholder="Tanzir Rahman" /><br></br>
+                <input type="name" id="name" placeholder={`${fn} ${ln}`} /><br></br>
                 <label htmlFor='email' id="text">Email</label><br></br>
-                <input type="email" id="text" placeholder='tanzir.rahman@email.com' /><br></br>
+                <input type="email" id="text" placeholder={em} /><br></br>
                 <label htmlFor='name' id="name">Username</label><br></br>
                 <input type="UName" id="name" placeholder='tanzir.rahman' /><br></br>
                 <label htmlFor='number' id="number"></label>Phone Number<br></br>
@@ -34,11 +39,11 @@ export const Settings: FC = () => {
             <div className="profile">
               <h3>Your Profile Picture</h3>
               <figure>
-                <img src={Picture} alt="" /> 
+                <img src={Picture} alt="" />
               </figure>
             </div>
           </div>
-        } 
+        }
         {tab === 2 &&
           <>
             <form className='settings__security'>
