@@ -9,7 +9,7 @@ const AuthenticatedRoute = () => {
 
     useEffect(() => {
         if (!authenticated) {
-            navigate("/login");
+            navigate("/signup");
         }
     }, [authenticated]);
 
