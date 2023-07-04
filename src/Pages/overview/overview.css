@@ -20,24 +20,9 @@
     flex-direction: column;
 }
 
-@media(max-width: 1300px) {
-    /* .overview_revenues {
-        display: flex;
-        justify-content: center;
-    }
-
-    .overview_revenues>section {
-        flex-basis: 320px;
-        flex-grow: 1;
-        max-width: 450px;
-        margin: 0 auto;
-    } */
-}
-
 .overview .transactions {
     display: grid;
     grid-template-columns: 1fr 2fr;
-    justify-content: space-between;
     gap: 1.5rem;
     margin-top: 1.5rem;
 }
@@ -48,4 +33,25 @@
     margin: 0 auto;
     display: grid;
     gap: 1rem;
+}
+
+@media(max-width: 1150px) {
+    .overview_revenues {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .overview_revenues>section {
+        flex-basis: 320px;
+        flex-grow: 1;
+        max-width: 450px;
+        margin: 0 auto;
+    }
+
+    .overview .transactions {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
 }

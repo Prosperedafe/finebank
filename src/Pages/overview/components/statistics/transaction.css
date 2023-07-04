@@ -3,6 +3,15 @@
     flex-direction: column;
 }
 
+@media(max-width: 1150px) {
+    .recent_transaction {
+        flex-grow: 1;
+        flex-basis: 320px;
+        max-width: 450px;
+        margin: 0 auto;
+    }
+}
+
 .recent_transaction header {
     display: flex;
     justify-content: space-between;
