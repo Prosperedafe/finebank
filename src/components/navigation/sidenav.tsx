@@ -56,9 +56,9 @@ const Options = () => {
     }
 
     return (
-        <div className='nav__options'>
+        <div ref={ref} className='nav__options'>
             <img ref={ref} onClick={() => setShowCard(!showCard)} src={dp} alt="dp" />
-            <div ref={ref} className={showCard ? "options__card show" : "options__card"}>
+            <div className={showCard ? "options__card show" : "options__card"}>
                 <NavLink onClick={() => setShowCard(!showCard)} to="/expenses">Expenses</NavLink>
                 <NavLink onClick={() => setShowCard(!showCard)} to="/goals">Goals</NavLink>
                 <NavLink onClick={() => setShowCard(!showCard)} to="/settings">Settings</NavLink>
