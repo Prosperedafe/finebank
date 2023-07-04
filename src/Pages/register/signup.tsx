@@ -10,8 +10,8 @@ import { basicSchema } from '../../schemas';
 // import { useNavigate } from 'react-router-dom';
 import { FC, useState } from 'react';
 import { GoogleBtn, Input, Logo, SignBtn } from '../../components/asset';
-import { useDispatch, useSelector } from 'react-redux';
-import { setUser } from '../../store/userReducer';
+// import { useDispatch, useSelector } from 'react-redux';
+// import { setUser } from '../../store/userReducer';
 
 const Signup: FC = () => {
 
@@ -34,16 +34,16 @@ const Signup: FC = () => {
     //     }
     //     return;
     // };
-    const user = useSelector((state: any) => state.user);
-    console.log(user);
+    // const user = useSelector((state: any) => state.user);
+    // console.log(user);
 
 
-    const dispatch = useDispatch();
+    // const dispatch = useDispatch();
 
-    const handleAction = () => {
-        dispatch(setUser({ userName: 'John Doe' }));
-        // Dispatch an action
-    };
+    // const handleAction = () => {
+    //     dispatch(setUser({ userName: 'John Doe' }));
+    //     // Dispatch an action
+    // };
 
     const onSubmit = () => {
         // console.log('hello');
@@ -87,7 +87,7 @@ const Signup: FC = () => {
     return (
         <section className="signup">
             <Logo />
-            <h2>Create an account{user}</h2>
+            <h2>Create an account</h2>
             <form onSubmit={handleSubmit}>
 
                 <label htmlFor="name">First Name</label>
