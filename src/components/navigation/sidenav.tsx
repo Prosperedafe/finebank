@@ -3,6 +3,13 @@ import links from './links';
 import dp from './icons/profile.png';
 import options from './icons/options.svg';
 import { NavLink, Link } from 'react-router-dom';
+import { useState, useRef, useEffect } from 'react';
+
+const logout = () => {
+    localStorage.removeItem("fb/ps/")
+    localStorage.removeItem("fb/em/")
+    window.location.reload()
+}
 
 export const Logo = () => {
     return (
@@ -24,16 +31,50 @@ export const LogoutLogo = () => {
     )
 }
 
+const Options = () => {
+
+    const [showCard, setShowCard] = useState<boolean>(false);
+    const ref = useRef<HTMLImageElement & HTMLImageElement>(null);
+
+    useOnClickOutside(ref, () => setShowCard(false));
+
+    function useOnClickOutside(ref: any, handler: any) {
+        useEffect(() => {
+            const listener = (event: any) => {
+                if (!ref.current || ref.current.contains(event.target)) {
+                    return;
+                }
+                handler(event);
+            };
+            document.addEventListener("mousedown", listener);
+            document.addEventListener("touchstart", listener);
+            return () => {
+                document.removeEventListener("mousedown", listener);
+                document.removeEventListener("touchstart", listener);
+            };
+        }, [ref, handler]);
+    }
+
+    return (
+        <div className='nav__options'>
+            <img ref={ref} onClick={() => setShowCard(!showCard)} src={dp} alt="dp" />
+            <div ref={ref} className={showCard ? "options__card show" : "options__card"}>
+                <NavLink onClick={() => setShowCard(!showCard)} to="/expenses">Expenses</NavLink>
+                <NavLink onClick={() => setShowCard(!showCard)} to="/goals">Goals</NavLink>
+                <NavLink onClick={() => setShowCard(!showCard)} to="/settings">Settings</NavLink>
+                <button onClick={logout} className='logout'>
+                    <LogoutLogo />
+                    <span>Logout</span>
+                </button>
+            </div>
+        </div>
+    )
+}
+
 const SideNav = () => {
 
     const fn = JSON.parse(localStorage.getItem("fb/fn/") as string)
     const ln = JSON.parse(localStorage.getItem("fb/ln/") as string)
-
-    const logout = () => {
-        localStorage.removeItem("fb/ps/")
-        localStorage.removeItem("fb/em/")
-        window.location.reload()
-    }
 
     return (
         <nav>
@@ -67,6 +108,7 @@ const SideNav = () => {
                         <img className='options' src={options} alt="options" />
                     </div>
                 </Link>
+                <Options />
             </div>
         </nav>
     )

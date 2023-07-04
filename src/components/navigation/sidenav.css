@@ -112,7 +112,30 @@ nav .profile .view {
     margin-top: 5px;
 }
 
-@media(max-width: 700px) {
+.nav__options {
+    margin: 0 1rem;
+    display: none;
+}
+
+.nav__options>img {
+    cursor: pointer;
+}
+
+.nav__options .options__card {
+    background-color: #191919;
+    border-radius: 10px;
+    height: fit-content;
+    width: 200px;
+    position: fixed;
+    bottom: 4.5rem;
+    right: 0;
+    padding: 1rem;
+    opacity: 0;
+    pointer-events: none;
+    transition: all .3s ease-in-out;
+}
+
+@media(max-width: 720px) {
     nav>div {
         position: fixed;
         max-width: 1300px;
@@ -123,6 +146,7 @@ nav .profile .view {
         width: 100%;
         padding: .5rem 1rem;
         display: flex;
+        align-items: center;
         bottom: 0;
     }
 
@@ -141,6 +165,10 @@ nav .profile .view {
         font-size: 10px;
     }
 
+    nav ul .md {
+        display: none;
+    }
+
     nav .logo {
         display: none;
         margin: auto;
@@ -150,8 +178,33 @@ nav .profile .view {
         display: none;
     }
 
+    .nav__options .logout {
+        display: block;
+        margin-top: 0;
+        display: flex;
+        margin-top: 1rem;
+    }
+
+    .nav__options .show {
+        opacity: 1;
+        pointer-events: all;
+    }
+
+    .nav__options a {
+        color: #ffff;
+        display: block;
+        padding: .8rem 1rem;
+        border-radius: 6px;
+        font-size: .9rem;
+        margin: 3px 0;
+    }
+
     nav .profile {
         display: none;
+    }
+
+    .nav__options {
+        display: block;
     }
 }
 
@@ -180,10 +233,6 @@ nav .profile .view {
         width: 100%;
         max-width: 100%;
         padding: 0 .5rem;
-    }
-
-    nav ul .md {
-        display: none;
     }
 
     nav ul span {

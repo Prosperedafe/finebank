@@ -39,7 +39,7 @@ main {
   overflow-x: hidden;
 }
 
-@media(max-width: 700px) {
+@media(max-width: 720px) {
   .app {
     grid-template-columns: 1fr;
   }
