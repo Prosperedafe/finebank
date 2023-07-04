@@ -6,7 +6,7 @@
     border-radius: 8px;
     padding: 1rem;
     margin-top: .7rem;
-    min-height: 220px;
+    flex-grow: 1;
 }
 
 .total_balance h4,

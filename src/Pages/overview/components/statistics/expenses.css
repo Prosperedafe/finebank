@@ -21,7 +21,7 @@
     align-items: center;
     flex-grow: 1;
     flex-basis: 150px;
-    padding: 1rem;
+    padding: .5rem;
 }
 
 .overview_expenses .expenses h4 {

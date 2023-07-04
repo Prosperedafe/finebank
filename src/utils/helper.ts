@@ -1,9 +1,9 @@
 export const isAuthenticated = () => {
 
-    const authToken = localStorage.getItem("fbt/k/");
-    // const ID = localStorage.getItem("fdi/d/");
+    const authToken = localStorage.getItem("fb/em/");
+    const authName = localStorage.getItem("fb/ps/");
 
-    if (authToken !== "") {
+    if (authToken && authName !== "") {
         return true;
     }
     return false;

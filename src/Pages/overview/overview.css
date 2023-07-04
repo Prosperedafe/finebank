@@ -9,25 +9,22 @@
 }
 
 .overview_revenues {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
     justify-content: space-between;
-    flex-wrap: wrap;
     gap: 1.5rem;
 }
 
 .overview_revenues>section {
-    flex-basis: 320px;
-    flex-grow: 1;
-    max-width: 400px;
-    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
 }
 
 .overview .transactions {
-    margin-top: 1.5rem;
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
     gap: 1.5rem;
-    flex-wrap: wrap;
+    margin-top: 1.5rem;
 }
 
 .overview .transactions .stats {
@@ -36,4 +33,25 @@
     margin: 0 auto;
     display: grid;
     gap: 1rem;
+}
+
+@media(max-width: 1150px) {
+    .overview_revenues {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .overview_revenues>section {
+        flex-basis: 320px;
+        flex-grow: 1;
+        max-width: 450px;
+        margin: 0 auto;
+    }
+
+    .overview .transactions {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
 }

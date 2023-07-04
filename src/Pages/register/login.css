@@ -4,6 +4,13 @@
     margin: auto;
 }
 
+.login h2 {
+    color: #191D23;
+    font-size: 1.7rem;
+    margin: 1.5rem auto .5rem auto;
+    max-width: max-content;
+}
+
 .login a {
     color: #299D91;
     font-size: .9rem;

@@ -61,7 +61,9 @@ const Goals = () => {
                 <h3>Goals</h3>
                 <div className="goals__saving">
                     <Saving />
-                    <Summary />
+                    <div style={{ overflowX: "scroll", maxWidth: "100%" }}>
+                        <Summary />
+                    </div>
                 </div>
                 <section className="goals__expenses__category">
                     <h3>Expenses Goals by Category</h3>

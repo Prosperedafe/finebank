@@ -12,7 +12,7 @@ nav>div {
     min-height: 100%;
     max-height: 100%;
     width: 100%;
-    padding: 3rem 1.5rem;
+    padding: 3rem 1rem;
     scrollbar-width: none;
     -ms-overflow-style: none;
 }
@@ -21,7 +21,7 @@ nav>div::-webkit-scrollbar {
     display: none;
 }
 
-nav>div>img {
+nav .logo {
     display: block;
     margin: auto;
 }
@@ -112,7 +112,30 @@ nav .profile .view {
     margin-top: 5px;
 }
 
-@media(max-width: 650px) {
+.nav__options {
+    margin: 0 1rem;
+    display: none;
+}
+
+.nav__options>img {
+    cursor: pointer;
+}
+
+.nav__options .options__card {
+    background-color: #191919;
+    border-radius: 10px;
+    height: fit-content;
+    width: 200px;
+    position: fixed;
+    bottom: 4.5rem;
+    right: 0;
+    padding: 1rem;
+    opacity: 0;
+    pointer-events: none;
+    transition: all .3s ease-in-out;
+}
+
+@media(max-width: 720px) {
     nav>div {
         position: fixed;
         max-width: 1300px;
@@ -123,6 +146,7 @@ nav .profile .view {
         width: 100%;
         padding: .5rem 1rem;
         display: flex;
+        align-items: center;
         bottom: 0;
     }
 
@@ -131,11 +155,21 @@ nav .profile .view {
         margin: 0 auto 0 auto;
     }
 
+    nav ul a {
+        flex-direction: column;
+        padding: .5rem .7rem;
+        gap: 5px;
+    }
+
     nav ul span {
+        font-size: 10px;
+    }
+
+    nav ul .md {
         display: none;
     }
 
-    nav>div>img {
+    nav .logo {
         display: none;
         margin: auto;
     }
@@ -144,12 +178,37 @@ nav .profile .view {
         display: none;
     }
 
+    .nav__options .logout {
+        display: block;
+        margin-top: 0;
+        display: flex;
+        margin-top: 1rem;
+    }
+
+    .nav__options .show {
+        opacity: 1;
+        pointer-events: all;
+    }
+
+    .nav__options a {
+        color: #ffff;
+        display: block;
+        padding: .8rem 1rem;
+        border-radius: 6px;
+        font-size: .9rem;
+        margin: 3px 0;
+    }
+
     nav .profile {
         display: none;
     }
+
+    .nav__options {
+        display: block;
+    }
 }
 
-@media(max-width: 550px) {
+@media(max-width: 580px) {
     nav>div {
         padding: .5rem 0;
     }
@@ -167,17 +226,22 @@ nav .profile .view {
     }
 }
 
-@media(max-width: 350px) {
+@media(max-width: 530px) {
     nav ul {
-        flex-wrap: wrap;
-        justify-content: center;
+        justify-content: space-between;
+        margin: 0 auto;
+        width: 100%;
+        max-width: 100%;
+        padding: 0 .5rem;
     }
 
-    nav li {
-        flex-basis: 50px;
+    nav ul span {
+        font-size: 8px;
+        font-weight: 300;
     }
 
     nav ul a {
-        max-width: fit-content;
+        padding: .4rem;
+        max-width: 60px;
     }
 }

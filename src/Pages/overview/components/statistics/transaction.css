@@ -1,8 +1,15 @@
 .recent_transaction {
-    max-width: 400px;
-    margin: 0 auto;
-    flex-grow: 1;
-    flex-basis: 320px;
+    display: flex;
+    flex-direction: column;
+}
+
+@media(max-width: 1150px) {
+    .recent_transaction {
+        flex-grow: 1;
+        flex-basis: 320px;
+        max-width: 450px;
+        margin: 0 auto;
+    }
 }
 
 .recent_transaction header {
@@ -51,25 +58,26 @@
     border-radius: 8px;
     padding: 1rem;
     margin-top: .7rem;
+    flex-grow: 1;
 }
 
 .recent_transaction .items {
     display: flex;
     gap: 10px;
     align-items: center;
-    padding: 1.2rem 0;
+    padding: 1.4rem 0;
 }
 
 .recent_transaction h5 {
     font-size: 1rem;
     color: #191919;
-    margin-bottom: 3px;
+    margin-bottom: 6px;
 }
 
 .recent_transaction h6 {
     font-size: 1rem;
     color: #525256;
-    margin-bottom: 3px;
+    margin-bottom: 6px;
 }
 
 .recent_transaction p {
@@ -88,13 +96,11 @@
     max-width: 800px;
     width: 100%;
     margin: auto;
+    overflow-x: scroll;
 }
 
-.overview_statistics .graph {
-    width: 100%;
-    max-width: 100%;
-    display: block;
-    margin-top: 1rem;
+.overview_statistics::-webkit-scrollbar {
+    display: none;
 }
 
 .overview_statistics>div {
@@ -103,6 +109,18 @@
     border-radius: 8px;
     padding: 1rem;
     margin-top: .7rem;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    min-width: 650px;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.overview_statistics .graph {
+    width: 100%;
+    max-width: 100%;
+    display: block;
+    margin-top: 1rem;
 }
 
 .overview_statistics h4 {

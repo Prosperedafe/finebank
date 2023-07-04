@@ -2,20 +2,22 @@
     padding: 1rem 1rem 3rem 1rem;
     border-radius: 16px;
     background: #FFFFFF;
-box-shadow: 0px 20px 25px rgba(76, 103, 100, 0.1);
-border-radius: 16px;
-margin: 1rem 1rem 3rem 1;
+    box-shadow: 0px 20px 25px rgba(76, 103, 100, 0.1);
+    border-radius: 16px;
+    margin: 1rem 1rem 3rem 1rem;
 }
 
 .settings>div {
     flex-wrap: wrap;
 }
+
 .settings hgroup {
     display: flex;
     flex-wrap: wrap;
     column-gap: 2rem;
     row-gap: 1rem;
 }
+
 .settings hgroup button {
     color: #9f9f9f;
     background-color: transparent;
@@ -24,22 +26,27 @@ margin: 1rem 1rem 3rem 1;
     margin-bottom: 2rem;
     padding: 1rem 0.5rem;
 }
+
 .settings hgroup .current {
     border-bottom: 2px solid #299d91;
     color: #299d91;
 }
+
 .settings .settings__account {
     display: flex;
     justify-content: space-between;
     gap: 3rem;
 }
+
 .settings form {
     flex-basis: 200px;
 }
+
 .settings label {
     color: #525256;
     font-size: 18px;
 }
+
 .settings input {
     border: none;
     padding: 1.4rem 0.7rem;

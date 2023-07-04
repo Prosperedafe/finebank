@@ -31,11 +31,15 @@ button {
   grid-template-columns: 250px auto;
 }
 
+.auth {
+  grid-template-columns: 1fr !important;
+}
+
 main {
   overflow-x: hidden;
 }
 
-@media(max-width: 650px) {
+@media(max-width: 720px) {
   .app {
     grid-template-columns: 1fr;
   }

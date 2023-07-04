@@ -30,15 +30,16 @@ const Login: FC = () => {
     return (
         <section className="login">
             <Logo />
+            <h2>Login</h2>
             <form onSubmit={handleSubmit}>
                 <label htmlFor="email">Email Address</label><br />
-                <Input type='email' placeholder="johndeo@gmail.com" />
+                <Input name='' value='email' onBlur='' onChange='' id="" className='' type='email' placeholder="johndeo@gmail.com" />
                 <div className='password_label'>
                     <label htmlFor="password">Password</label>
                     <Link to='/forgotpassword'>Forgot Password?</Link>
                 </div>
                 <div className='password'>
-                    <Input type={type} placeholder="Password" />
+                    <Input name='' value='email' onBlur='' onChange='' id="" className='' type={type} placeholder="Password" />
                     <span onClick={handleToggle}>
                         <Icon icon={icon} size={18} />
                     </span>

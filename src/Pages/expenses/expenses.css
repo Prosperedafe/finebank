@@ -1,5 +1,11 @@
 .expenses {
-    padding: 1rem;
+    padding: 1rem 1rem 3rem 1rem;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.expenses *::-webkit-scrollbar {
+    display: none;
 }
 
 .expenses h3 {
@@ -14,11 +20,13 @@
     border-radius: 8px;
     padding: 1rem;
     margin-top: .7rem;
+    overflow-x: scroll;
 }
 
 .expenses__comparison>div>img {
     width: 100%;
     margin-top: .7rem;
+    min-width: 800px;
 }
 
 .expenses__comparison__heading {
