@@ -112,7 +112,7 @@ nav .profile .view {
     margin-top: 5px;
 }
 
-@media(max-width: 650px) {
+@media(max-width: 700px) {
     nav>div {
         position: fixed;
         max-width: 1300px;
@@ -131,8 +131,14 @@ nav .profile .view {
         margin: 0 auto 0 auto;
     }
 
+    nav ul a {
+        flex-direction: column;
+        padding: .5rem .7rem;
+        gap: 5px;
+    }
+
     nav ul span {
-        display: none;
+        font-size: 10px;
     }
 
     nav .logo {
@@ -149,7 +155,7 @@ nav .profile .view {
     }
 }
 
-@media(max-width: 550px) {
+@media(max-width: 580px) {
     nav>div {
         padding: .5rem 0;
     }
@@ -167,17 +173,26 @@ nav .profile .view {
     }
 }
 
-@media(max-width: 350px) {
+@media(max-width: 530px) {
     nav ul {
-        flex-wrap: wrap;
-        justify-content: center;
+        justify-content: space-between;
+        margin: 0 auto;
+        width: 100%;
+        max-width: 100%;
+        padding: 0 .5rem;
     }
 
-    nav li {
-        flex-basis: 50px;
+    nav ul .md {
+        display: none;
+    }
+
+    nav ul span {
+        font-size: 8px;
+        font-weight: 300;
     }
 
     nav ul a {
-        max-width: fit-content;
+        padding: .4rem;
+        max-width: 60px;
     }
 }

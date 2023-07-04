@@ -42,7 +42,7 @@ const SideNav = () => {
                 <ul>
                     {links.map((link: object | any, index: number) => {
                         return (
-                            <li key={index}>
+                            <li className={link.className} key={index}>
                                 <NavLink className={({ isActive }) => (isActive ? "active" : "")} to={link.path}>
                                     {link.icon}
                                     <span>
