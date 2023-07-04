@@ -1,15 +1,18 @@
 import { useEffect } from "react";
 import { isAuthenticated } from "./helper";
-import { Outlet, useNavigate } from "react-router-dom";
+import {
+    Outlet,
+    // useNavigate
+} from "react-router-dom";
 
 const AuthenticatedRoute = () => {
-    const navigate = useNavigate();
+    // const navigate = useNavigate();
 
     const authenticated = isAuthenticated();
 
     useEffect(() => {
         if (!authenticated) {
-            navigate("/signup");
+            // navigate("");
         }
     }, [authenticated]);
 
