@@ -6,6 +6,7 @@ import taxi from '../../assets/taxi.svg';
 import keyboard from '../../assets/keyboard.svg';
 import right from '../../assets/right.svg';
 import { FC, useState } from "react";
+import { Link } from 'react-router-dom';
 
 const all: Array<object> = [
     {
@@ -53,10 +54,10 @@ export const Transaction: FC = () => {
         <section className="recent_transaction">
             <header>
                 <h3>Recent Transaction</h3>
-                <button>
+                <Link to="/transaction">
                     <span>View All</span>
                     <img src={right} alt="" />
-                </button>
+                </Link>
             </header>
             <div className="main">
                 <hgroup>

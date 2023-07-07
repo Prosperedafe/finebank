@@ -19,7 +19,7 @@
     gap: 1rem;
 }
 
-.recent_transaction header button {
+.recent_transaction header a {
     border: none;
     background: transparent;
     font-size: .85rem;

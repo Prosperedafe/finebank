@@ -1,15 +1,16 @@
 import right from '../../../../assets/chevrons-right.svg';
 import figma from '../../../../assets/Figma.svg';
 import adobe from '../../../../assets/Adobe.svg';
+import { Link } from 'react-router-dom';
 
 export const Bill = () => {
     return (
         <section className="overview__bill">
             <div className="overview__bills__heading">
                 <h3>Upcoming Bill</h3>
-                <button>
+                <Link to="/bills">
                     <span>View All</span><img src={right} alt="" />
-                </button>
+                </Link>
             </div>
             <div className="overview__bills">
                 <div>
