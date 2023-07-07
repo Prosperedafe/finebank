@@ -39,6 +39,34 @@ main {
   overflow-x: hidden;
 }
 
+.error_page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+  text-align: center;
+  padding: 1rem;
+}
+
+.error_page h1 {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+  color: #299d91;
+}
+
+.error_page p a {
+  font-size: 1.1rem;
+  color: #2d2d2d;
+  line-height: 2.2;
+}
+
+.error_page p a {
+  font-size: 1.2rem;
+  color: #299d91;
+  font-weight: 600;
+}
+
 @media(max-width: 720px) {
   .app {
     grid-template-columns: 1fr;

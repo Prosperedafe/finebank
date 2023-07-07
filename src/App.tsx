@@ -7,18 +7,19 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Login from './Pages/register/login';
 import Signup from './Pages/register/signup';
 import SideNav from './components/navigation/sidenav';
+import ErrorPage from './Pages/404';
+import OpenRoutes from './utils/openRoutes';
 import ScrollToTop from './scrollToTop';
 import ForgotPassword from './Pages/register/forgotPassword';
 import AuthenticatedRoute from './utils/authRoute';
-import OpenRoutes from './utils/openRoutes';
 const Bills = lazy(() => import('./Pages/bills/bills'));
 const Goals = lazy(() => import('./Pages/goals/goal'));
 const Welcome = lazy(() => import('./Pages/welcome'));
 const Balances = lazy(() => import('./Pages/balances/balances'));
 const Expenses = lazy(() => import('./Pages/expenses/expenses'));
 const OverView = lazy(() => import('./Pages/overview/overview'));
-const Transaction = lazy(() => import('./Pages/transactions/transactions'));
 const Settings = lazy(() => import('./Pages/settings/settings'));
+const Transaction = lazy(() => import('./Pages/transactions/transactions'));
 
 const App: FC = () => {
 
@@ -41,6 +42,7 @@ const App: FC = () => {
         <main>
           <Suspense fallback={<Loader />}>
             <Routes>
+              <Route path='*' element={<ErrorPage />} />
               <Route element={<OpenRoutes />}>
                 <Route path='login' element={<Login />} />
                 <Route path='/signup' element={<Signup />} />

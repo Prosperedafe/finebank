@@ -132,7 +132,7 @@
     align-items: center;
 }
 
-.overview__bills__heading button {
+.overview__bills__heading a {
     border: none;
     background: transparent;
     font-size: .85rem;
