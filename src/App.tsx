@@ -36,7 +36,7 @@ const App: FC = () => {
   return (
     <BrowserRouter>
       <div className={auth == true ? "app" : "app"}>
-        {showNav ? < SideNav /> : <SideNav />}
+        {showNav ? < SideNav /> : <></>}
         <ScrollToTop />
         <main>
           <Suspense fallback={<Loader />}>

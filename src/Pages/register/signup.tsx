@@ -3,59 +3,56 @@ import "./error.css";
 import { eye } from "react-icons-kit/feather/eye";
 import { Link } from 'react-router-dom';
 import { Icon } from "react-icons-kit";
-// import { toast } from 'react-toastify';
+import { toast } from 'react-toastify';
 import { eyeOff } from "react-icons-kit/feather/eyeOff";
 import { useFormik } from 'formik';
 import { basicSchema } from '../../schemas';
-// import { useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { FC, useState } from 'react';
 import { GoogleBtn, Input, Logo, SignBtn } from '../../components/asset';
-// import { useDispatch, useSelector } from 'react-redux';
-// import { setUser } from '../../store/userReducer';
 
 const Signup: FC = () => {
 
-    // const navigate = useNavigate()
+    const navigate = useNavigate()
 
-    // const handleSaveAuth = (fn: string, ln: string, email: string, ps: string) => {
-    //     //save token id and first name to storage
-    //     localStorage.setItem("fb/fn/", JSON.stringify(fn));
-    //     localStorage.setItem("fb/ln/", JSON.stringify(ln));
-    //     localStorage.setItem("fb/em/", JSON.stringify(email))
-    //     localStorage.setItem("fb/ps/", JSON.stringify(ps))
+    const handleSaveAuth = (fn: string, ln: string, email: string, ps: string) => {
+        //save token id and first name to storage
+        localStorage.setItem("fb/fn/", JSON.stringify(fn));
+        localStorage.setItem("fb/ln/", JSON.stringify(ln));
+        localStorage.setItem("fb/em/", JSON.stringify(email))
+        localStorage.setItem("fb/ps/", JSON.stringify(ps))
 
-    //     // get token and id from storage
-    //     const authname = localStorage.getItem("fb/fn/");
-    //     const ID = localStorage.getItem("fb/ps/");
+        // get token and id from storage
+        const authname = localStorage.getItem("fb/fn/");
+        const ID = localStorage.getItem("fb/ps/");
 
-    //     // navigate if auth token and id is not empty
-    //     if (authname && ID !== "") {
-    //         navigate("/");
-    //     }
-    //     return;
-    // };
-    // const user = useSelector((state: any) => state.user);
-    // console.log(user);
+        // navigate if auth token and id is not empty
+        if (authname && ID !== "") {
+            navigate("/");
+        }
+        window.location.reload()
+        return;
+    };
 
-
-    // const dispatch = useDispatch();
-
-    // const handleAction = () => {
-    //     dispatch(setUser({ userName: 'John Doe' }));
-    //     // Dispatch an action
-    // };
-
-    const onSubmit = () => {
-        // console.log('hello');
-        // After successful login, save user details to Redux store
-        // const user = {
-        //     id: 1,
-        //     name: 'John Doe',
-        //     email: 'johndoe@example.com',
-        //     // Add more user details as needed
-        // };
-
-        // dispatch(setUser(user));
+    const onSubmit = (values: any, actions: any) => {
+        if (values !== "{}") {
+            toast.success("Account Succesfully Created", {
+                position: "top-right",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "colored",
+            });
+            const firstName = values.firstName;
+            const lastName = values.lastName;
+            const email = values.email;
+            const password = values.password;
+            handleSaveAuth(firstName, lastName, email, password);
+            actions.resetForm();
+        }
     }
 
     const { values, errors, touched, isSubmitting, handleBlur, handleChange, handleSubmit } = useFormik({
@@ -69,7 +66,6 @@ const Signup: FC = () => {
         onSubmit
     });
 
-    onSubmit()
 
     const [type, setType] = useState<string>("password");
     const [icon, setIcon] = useState<any>(eyeOff);

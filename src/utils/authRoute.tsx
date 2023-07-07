@@ -2,19 +2,29 @@ import { useEffect } from "react";
 import { isAuthenticated } from "./helper";
 import {
     Outlet,
-    // useNavigate
+    useNavigate
 } from "react-router-dom";
 
+export const clearStorage = () => {
+    localStorage.removeItem('c/em/')
+    localStorage.removeItem('c/ps/')
+    window.location.reload()
+}
+
 const AuthenticatedRoute = () => {
-    // const navigate = useNavigate();
+    const navigate = useNavigate();
 
     const authenticated = isAuthenticated();
 
     useEffect(() => {
         if (!authenticated) {
-            // navigate("");
+            navigate("/login");
         }
     }, [authenticated]);
+
+    useEffect(() => {
+        setTimeout(clearStorage, 1000 * 60 * 60 * 3)
+    }, [])
 
     return (
         <div>

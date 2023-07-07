@@ -2,14 +2,11 @@ import './sidenav.css';
 import links from './links';
 import dp from './icons/profile.png';
 import options from './icons/options.svg';
+import { clearStorage } from '../../utils/authRoute';
 import { NavLink, Link } from 'react-router-dom';
 import { useState, useRef, useEffect } from 'react';
 
-const logout = () => {
-    localStorage.removeItem("fb/ps/")
-    localStorage.removeItem("fb/em/")
-    window.location.reload()
-}
+const logout = () => clearStorage()
 
 export const Logo = () => {
     return (
