@@ -1,10 +1,11 @@
 export const isAuthenticated = () => {
 
     const authToken = localStorage.getItem("fb/em/");
-    const authName = localStorage.getItem("fb/ps/");
+    const authPassword = localStorage.getItem("fb/ps/");
 
-    if (authToken && authName !== "") {
+    if (authToken && authPassword !== "") {
         return true;
     }
     return false;
 }
+

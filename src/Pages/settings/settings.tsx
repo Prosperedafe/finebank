@@ -5,6 +5,16 @@ import { PagesHeader } from '../../components/dashboard/header';
 
 export const Settings: FC = () => {
 
+  const deleteAccount = () => {
+    if (window.confirm("Are you sure you want to delete your account? All your data will be lost and you won't be able to retrieve them")) {
+      localStorage.removeItem("fb/fn/")
+      localStorage.removeItem("fb/ln/")
+      localStorage.removeItem("fb/em/")
+      localStorage.removeItem("fb/ps/")
+      window.location.reload()
+    }
+  }
+
   const fn = JSON.parse(localStorage.getItem("fb/fn/") as string)
   const ln = JSON.parse(localStorage.getItem("fb/ln/") as string)
   const em = JSON.parse(localStorage.getItem("fb/em/") as string)
@@ -57,6 +67,7 @@ export const Settings: FC = () => {
               <input type="number" id="number" placeholder='+880  |  51547 588698' /><br></br>
             </form>
             <button className='update'>Update Password</button>
+            <button onClick={deleteAccount} className='delete'>Delete Account</button>
           </>
         }
       </section>

@@ -23,20 +23,20 @@ const Settings = lazy(() => import('./Pages/settings/settings'));
 const App: FC = () => {
 
   const auth = isAuthenticated();
-  const [showNav, setShowNav] = useState<boolean>(false)
+  const [showApp, setShowApp] = useState<boolean>(false)
 
   useEffect(() => {
     if (auth) {
-      setShowNav(true)
+      setShowApp(true)
     } else {
-      setShowNav(false)
+      setShowApp(false)
     }
   })
 
   return (
     <BrowserRouter>
-      <div className={auth == true ? "app" : "app"}>
-        {showNav ? < SideNav /> : <SideNav />}
+      <div className={auth == true ? "app" : "app auth"}>
+        {showApp ? < SideNav /> : <></>}
         <ScrollToTop />
         <main>
           <Suspense fallback={<Loader />}>
