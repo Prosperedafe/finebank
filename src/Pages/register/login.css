@@ -87,7 +87,7 @@
     margin: 1.5rem 0 .7rem 0;
 }
 
-.login p {
+.login>p {
     display: flex;
     justify-content: space-between;
     align-items: center;

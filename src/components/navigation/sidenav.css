@@ -158,7 +158,7 @@ nav .profile .view {
     nav ul a {
         flex-direction: column;
         padding: .5rem .7rem;
-        gap: 5px;
+        gap: 2px;
     }
 
     nav ul span {
@@ -210,7 +210,7 @@ nav .profile .view {
 
 @media(max-width: 580px) {
     nav>div {
-        padding: .5rem 0;
+        padding: .3rem 0;
     }
 
     nav ul {
@@ -222,6 +222,10 @@ nav .profile .view {
     }
 
     nav ul a img {
+        height: 20px;
+    }
+
+    nav ul a svg {
         height: 20px;
     }
 }
@@ -241,7 +245,7 @@ nav .profile .view {
     }
 
     nav ul a {
-        padding: .4rem;
+        padding: .3rem;
         max-width: 60px;
     }
 }

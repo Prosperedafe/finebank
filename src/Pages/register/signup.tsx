@@ -27,10 +27,13 @@ const Signup: FC = () => {
         const ID = localStorage.getItem("fb/ps/");
 
         // navigate if auth token and id is not empty
-        if (authname && ID !== "") {
-            navigate("/");
+        const redirect = () => {
+            if (authname && ID !== "") {
+                window.location.reload()
+                navigate("/");
+            }
         }
-        window.location.reload()
+        setTimeout(redirect, 3000)
         return;
     };
 

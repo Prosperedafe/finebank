@@ -63,6 +63,18 @@
     font-size: 16px;
 }
 
+.settings .delete {
+    padding: 1rem 2rem;
+    background: #ff5555;
+    border: none;
+    color: white;
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: .9rem;
+    display: block;
+    margin: 1.5rem auto 0 auto;
+}
+
 .settings .profile {
     flex-basis: 200px;
 }

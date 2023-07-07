@@ -6,8 +6,8 @@ import {
 } from "react-router-dom";
 
 export const clearStorage = () => {
-    localStorage.removeItem('c/em/')
-    localStorage.removeItem('c/ps/')
+    localStorage.removeItem('fb/em/')
+    localStorage.removeItem('fb/ps/')
     window.location.reload()
 }
 

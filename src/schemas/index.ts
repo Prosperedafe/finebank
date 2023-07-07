@@ -15,7 +15,7 @@ export const basicSchema = yup.object().shape({
 });
 
 export const loginSchema = yup.object().shape({
-  loginId: yup.string().email("Please enter a valid email").required("Required"),
+  email: yup.string().email("Please enter a valid email").required("Required"),
   password: yup
     .string()
     .min(5)
